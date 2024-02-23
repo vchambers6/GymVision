@@ -13,46 +13,49 @@ struct FrameView: View {
     var body: some View {
         
         if let image = image {
-            ZStack {
-                Image(image, scale: 3.0, orientation: .up, label: Text("Gymnast Performing \(label ?? "" ) Skill")).resizable().aspectRatio(contentMode: .fill)
-                /// Overview Button
-                
-                HStack {
-                    Spacer()
-                    VStack {
-                        NavigationLink(destination: OverviewView()) {
-                            OverviewButton().padding(75)
-                        }
-                        Spacer()
-                    }
-                }
-                
-                
-                ActionClassifierCardView(skillLabel: label ?? "No Skill").offset(y: 100)
-            }
-            
-        } else {
-            ZStack {
-                
-               Image("simone").resizable()
-                    .aspectRatio(contentMode: .fill).zIndex(1)
-                /// Overview Button
-                VStack {
-                    HStack {
-                        Spacer()
-                        NavigationLink(destination: OverviewView()) {
-                            OverviewButton()
-                        }
-                        .buttonStyle(PlainButtonStyle()) // Remove the default button style to avoid extra padding
-                        .padding(.trailing).zIndex(2) // Adjust the padding as needed
-                    }
-                    Spacer()
-                }
-                
-                
+            GeometryReader { geo in
+                Color.black
+                    .frame(height: .infinity, alignment: .center)
+                                       .ignoresSafeArea()
+                ZStack(alignment: .center) {
+                    /// Full screen image
+                    Image(image, scale: 3.0, orientation: .up, label: Text("Gymnast Performing \(label ?? "" ) Skill"))
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geo.size.width, height: geo.size.height)
                     
-//                OverviewButton().offset(x: 120, y:-340)
-                ActionClassifierCardView().offset(y: 280).zIndex(2)
+                    /// Overview overlay button
+                    NavigationLink(destination: OverviewView()) {
+                        OverviewButton()
+                            .padding()
+                    }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topTrailing)
+                    
+                    /// Action classifier card
+                    ActionClassifierCardView(skillLabel: label ?? "No Skill").frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
+                }
+            }
+        } else {
+            
+            GeometryReader { geo in
+                Color.black
+                    .frame(height: .infinity, alignment: .center)
+                                       .ignoresSafeArea()
+                ZStack(alignment: .center) {
+                    /// Full screen image
+                    Image("simone")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                    
+                    /// Overview overlay button
+                    NavigationLink(destination: OverviewView()) {
+                        OverviewButton()
+                            .padding()
+                    }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topTrailing)
+                    
+                    /// Action classifier card
+                    ActionClassifierCardView().frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
+                }
             }
         }
     }
