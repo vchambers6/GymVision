@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67661C912B83F0FB0049DBEF /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C902B83F0FB0049DBEF /* ActionPrediction.swift */; };
+		67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 67661C922B83F1B80049DBEF /* SkillClassifier.mlmodel */; };
+		67661C952B83F1EB0049DBEF /* SkillClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C942B83F1EB0049DBEF /* SkillClassifier+Singleton.swift */; };
+		67661C992B83F2250049DBEF /* SkillClassifier+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C982B83F2250049DBEF /* SkillClassifier+Label.swift */; };
+		67661C9B2B83F2390049DBEF /* SkillClassifier+LabelCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C9A2B83F2390049DBEF /* SkillClassifier+LabelCheck.swift */; };
+		67661C9D2B83F25C0049DBEF /* SkillClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C9C2B83F25C0049DBEF /* SkillClassifier+PredictAction.swift */; };
+		67661C9F2B83F27F0049DBEF /* SkillClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C9E2B83F27F0049DBEF /* SkillClassifier+FrameRate.swift */; };
+		67661CA12B86E8AE0049DBEF /* FrameProcessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661CA02B86E8AE0049DBEF /* FrameProcessingChain.swift */; };
+		67661CA42B86F1E20049DBEF /* FrameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661CA32B86F1E20049DBEF /* FrameViewModel.swift */; };
+		676F445D2B7D841D0059328B /* LiveCameraSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F445C2B7D841D0059328B /* LiveCameraSwiftUIApp.swift */; };
+		676F445F2B7D841D0059328B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F445E2B7D841D0059328B /* ContentView.swift */; };
+		676F44612B7D841F0059328B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F44602B7D841F0059328B /* Assets.xcassets */; };
+		676F44642B7D841F0059328B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F44632B7D841F0059328B /* Preview Assets.xcassets */; };
+		676F446F2B7D841F0059328B /* LiveCameraSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F446E2B7D841F0059328B /* LiveCameraSwiftUITests.swift */; };
+		676F44792B7D841F0059328B /* LiveCameraSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44782B7D841F0059328B /* LiveCameraSwiftUIUITests.swift */; };
+		676F447B2B7D841F0059328B /* LiveCameraSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F447A2B7D841F0059328B /* LiveCameraSwiftUIUITestsLaunchTests.swift */; };
+		676F44882B7D84290059328B /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44872B7D84290059328B /* FrameView.swift */; };
+		676F448A2B7D84C30059328B /* FrameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44892B7D84C30059328B /* FrameHandler.swift */; };
+		676F448D2B7D9ABB0059328B /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F448C2B7D9ABB0059328B /* Pose.swift */; };
+		676F448F2B7D9AD50059328B /* Pose+Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F448E2B7D9AD50059328B /* Pose+Landmark.swift */; };
+		676F44912B7D9AE80059328B /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44902B7D9AE80059328B /* Pose+Connection.swift */; };
+		676F44932B7D9B000059328B /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44922B7D9B000059328B /* Pose+Empty.swift */; };
+		676F44962B7DB13B0059328B /* PerformanceReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44952B7DB13B0059328B /* PerformanceReporter.swift */; };
+		67A978FC2B8719DE00B605AB /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */; };
+		67A978FE2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */; };
+		67A979002B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FF2B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift */; };
+		67A979022B87F98C00B605AB /* ActionClassifierCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A979012B87F98C00B605AB /* ActionClassifierCardView.swift */; };
+		67A979042B87FE8C00B605AB /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A979032B87FE8C00B605AB /* OverviewView.swift */; };
+		67A979072B88083500B605AB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A979062B88083500B605AB /* HomeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		676F446B2B7D841F0059328B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 676F44512B7D841D0059328B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 676F44582B7D841D0059328B;
+			remoteInfo = LiveCameraSwiftUI;
+		};
+		676F44752B7D841F0059328B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 676F44512B7D841D0059328B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 676F44582B7D841D0059328B;
+			remoteInfo = LiveCameraSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67661C902B83F0FB0049DBEF /* ActionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
+		67661C922B83F1B80049DBEF /* SkillClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SkillClassifier.mlmodel; sourceTree = "<group>"; };
+		67661C942B83F1EB0049DBEF /* SkillClassifier+Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillClassifier+Singleton.swift"; sourceTree = "<group>"; };
+		67661C982B83F2250049DBEF /* SkillClassifier+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillClassifier+Label.swift"; sourceTree = "<group>"; };
+		67661C9A2B83F2390049DBEF /* SkillClassifier+LabelCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillClassifier+LabelCheck.swift"; sourceTree = "<group>"; };
+		67661C9C2B83F25C0049DBEF /* SkillClassifier+PredictAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillClassifier+PredictAction.swift"; sourceTree = "<group>"; };
+		67661C9E2B83F27F0049DBEF /* SkillClassifier+FrameRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillClassifier+FrameRate.swift"; sourceTree = "<group>"; };
+		67661CA02B86E8AE0049DBEF /* FrameProcessingChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameProcessingChain.swift; sourceTree = "<group>"; };
+		67661CA32B86F1E20049DBEF /* FrameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameViewModel.swift; sourceTree = "<group>"; };
+		676F44592B7D841D0059328B /* GymnAIstic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymnAIstic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		676F445C2B7D841D0059328B /* LiveCameraSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraSwiftUIApp.swift; sourceTree = "<group>"; };
+		676F445E2B7D841D0059328B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		676F44602B7D841F0059328B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		676F44632B7D841F0059328B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		676F44652B7D841F0059328B /* LiveCameraSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveCameraSwiftUI.entitlements; sourceTree = "<group>"; };
+		676F446A2B7D841F0059328B /* GymnAIsticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymnAIsticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		676F446E2B7D841F0059328B /* LiveCameraSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraSwiftUITests.swift; sourceTree = "<group>"; };
+		676F44742B7D841F0059328B /* GymnAIsticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymnAIsticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		676F44782B7D841F0059328B /* LiveCameraSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraSwiftUIUITests.swift; sourceTree = "<group>"; };
+		676F447A2B7D841F0059328B /* LiveCameraSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		676F44872B7D84290059328B /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		676F44892B7D84C30059328B /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
+		676F448C2B7D9ABB0059328B /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		676F448E2B7D9AD50059328B /* Pose+Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
+		676F44902B7D9AE80059328B /* Pose+Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
+		676F44922B7D9B000059328B /* Pose+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
+		676F44952B7DB13B0059328B /* PerformanceReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceReporter.swift; sourceTree = "<group>"; };
+		67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
+		67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
+		67A978FF2B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoDataOutput+PixelFormat.swift"; sourceTree = "<group>"; };
+		67A979012B87F98C00B605AB /* ActionClassifierCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionClassifierCardView.swift; sourceTree = "<group>"; };
+		67A979032B87FE8C00B605AB /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		67A979062B88083500B605AB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		67A9790B2B8816E100B605AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		676F44562B7D841D0059328B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		676F44672B7D841F0059328B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		676F44712B7D841F0059328B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67661C8F2B83F0EB0049DBEF /* Action Classifier */ = {
+			isa = PBXGroup;
+			children = (
+				67661C922B83F1B80049DBEF /* SkillClassifier.mlmodel */,
+				67661C902B83F0FB0049DBEF /* ActionPrediction.swift */,
+				67661C942B83F1EB0049DBEF /* SkillClassifier+Singleton.swift */,
+				67661C982B83F2250049DBEF /* SkillClassifier+Label.swift */,
+				67661C9A2B83F2390049DBEF /* SkillClassifier+LabelCheck.swift */,
+				67661C9C2B83F25C0049DBEF /* SkillClassifier+PredictAction.swift */,
+				67661C9E2B83F27F0049DBEF /* SkillClassifier+FrameRate.swift */,
+			);
+			path = "Action Classifier";
+			sourceTree = "<group>";
+		};
+		676F44502B7D841D0059328B = {
+			isa = PBXGroup;
+			children = (
+				676F445B2B7D841D0059328B /* GymnAIstic */,
+				676F446D2B7D841F0059328B /* GymnAIsticTests */,
+				676F44772B7D841F0059328B /* GymnAIsticUITests */,
+				676F445A2B7D841D0059328B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		676F445A2B7D841D0059328B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				676F44592B7D841D0059328B /* GymnAIstic.app */,
+				676F446A2B7D841F0059328B /* GymnAIsticTests.xctest */,
+				676F44742B7D841F0059328B /* GymnAIsticUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		676F445B2B7D841D0059328B /* GymnAIstic */ = {
+			isa = PBXGroup;
+			children = (
+				67A9790B2B8816E100B605AB /* Info.plist */,
+				67A979082B88083900B605AB /* Video Capture + Processing */,
+				67A979052B88080B00B605AB /* Views */,
+				67661C8F2B83F0EB0049DBEF /* Action Classifier */,
+				676F44942B7DB12C0059328B /* Utility */,
+				676F448B2B7D9AAD0059328B /* Pose */,
+				676F445C2B7D841D0059328B /* LiveCameraSwiftUIApp.swift */,
+				676F445E2B7D841D0059328B /* ContentView.swift */,
+				676F44602B7D841F0059328B /* Assets.xcassets */,
+				676F44652B7D841F0059328B /* LiveCameraSwiftUI.entitlements */,
+				676F44622B7D841F0059328B /* Preview Content */,
+			);
+			path = GymnAIstic;
+			sourceTree = "<group>";
+		};
+		676F44622B7D841F0059328B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				676F44632B7D841F0059328B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		676F446D2B7D841F0059328B /* GymnAIsticTests */ = {
+			isa = PBXGroup;
+			children = (
+				676F446E2B7D841F0059328B /* LiveCameraSwiftUITests.swift */,
+			);
+			path = GymnAIsticTests;
+			sourceTree = "<group>";
+		};
+		676F44772B7D841F0059328B /* GymnAIsticUITests */ = {
+			isa = PBXGroup;
+			children = (
+				676F44782B7D841F0059328B /* LiveCameraSwiftUIUITests.swift */,
+				676F447A2B7D841F0059328B /* LiveCameraSwiftUIUITestsLaunchTests.swift */,
+			);
+			path = GymnAIsticUITests;
+			sourceTree = "<group>";
+		};
+		676F448B2B7D9AAD0059328B /* Pose */ = {
+			isa = PBXGroup;
+			children = (
+				676F448C2B7D9ABB0059328B /* Pose.swift */,
+				676F448E2B7D9AD50059328B /* Pose+Landmark.swift */,
+				676F44902B7D9AE80059328B /* Pose+Connection.swift */,
+				676F44922B7D9B000059328B /* Pose+Empty.swift */,
+			);
+			path = Pose;
+			sourceTree = "<group>";
+		};
+		676F44942B7DB12C0059328B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				676F44952B7DB13B0059328B /* PerformanceReporter.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		67A979052B88080B00B605AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				676F44872B7D84290059328B /* FrameView.swift */,
+				67A979012B87F98C00B605AB /* ActionClassifierCardView.swift */,
+				67A979032B87FE8C00B605AB /* OverviewView.swift */,
+				67A979062B88083500B605AB /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67A979082B88083900B605AB /* Video Capture + Processing */ = {
+			isa = PBXGroup;
+			children = (
+				676F44892B7D84C30059328B /* FrameHandler.swift */,
+				67661CA02B86E8AE0049DBEF /* FrameProcessingChain.swift */,
+				67661CA32B86F1E20049DBEF /* FrameViewModel.swift */,
+				67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */,
+				67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */,
+				67A978FF2B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift */,
+			);
+			path = "Video Capture + Processing";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		676F44582B7D841D0059328B /* GymnAIstic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 676F447E2B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymnAIstic" */;
+			buildPhases = (
+				676F44552B7D841D0059328B /* Sources */,
+				676F44562B7D841D0059328B /* Frameworks */,
+				676F44572B7D841D0059328B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GymnAIstic;
+			productName = LiveCameraSwiftUI;
+			productReference = 676F44592B7D841D0059328B /* GymnAIstic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		676F44692B7D841F0059328B /* GymnAIsticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 676F44812B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymnAIsticTests" */;
+			buildPhases = (
+				676F44662B7D841F0059328B /* Sources */,
+				676F44672B7D841F0059328B /* Frameworks */,
+				676F44682B7D841F0059328B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				676F446C2B7D841F0059328B /* PBXTargetDependency */,
+			);
+			name = GymnAIsticTests;
+			productName = LiveCameraSwiftUITests;
+			productReference = 676F446A2B7D841F0059328B /* GymnAIsticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		676F44732B7D841F0059328B /* GymnAIsticUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 676F44842B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymnAIsticUITests" */;
+			buildPhases = (
+				676F44702B7D841F0059328B /* Sources */,
+				676F44712B7D841F0059328B /* Frameworks */,
+				676F44722B7D841F0059328B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				676F44762B7D841F0059328B /* PBXTargetDependency */,
+			);
+			name = GymnAIsticUITests;
+			productName = LiveCameraSwiftUIUITests;
+			productReference = 676F44742B7D841F0059328B /* GymnAIsticUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		676F44512B7D841D0059328B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					676F44582B7D841D0059328B = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					676F44692B7D841F0059328B = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 676F44582B7D841D0059328B;
+					};
+					676F44732B7D841F0059328B = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 676F44582B7D841D0059328B;
+					};
+				};
+			};
+			buildConfigurationList = 676F44542B7D841D0059328B /* Build configuration list for PBXProject "GymnAIstic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 676F44502B7D841D0059328B;
+			productRefGroup = 676F445A2B7D841D0059328B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				676F44582B7D841D0059328B /* GymnAIstic */,
+				676F44692B7D841F0059328B /* GymnAIsticTests */,
+				676F44732B7D841F0059328B /* GymnAIsticUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		676F44572B7D841D0059328B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				676F44642B7D841F0059328B /* Preview Assets.xcassets in Resources */,
+				676F44612B7D841F0059328B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		676F44682B7D841F0059328B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		676F44722B7D841F0059328B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		676F44552B7D841D0059328B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67661C9F2B83F27F0049DBEF /* SkillClassifier+FrameRate.swift in Sources */,
+				67A979022B87F98C00B605AB /* ActionClassifierCardView.swift in Sources */,
+				67661C9B2B83F2390049DBEF /* SkillClassifier+LabelCheck.swift in Sources */,
+				676F448F2B7D9AD50059328B /* Pose+Landmark.swift in Sources */,
+				67661C992B83F2250049DBEF /* SkillClassifier+Label.swift in Sources */,
+				676F44882B7D84290059328B /* FrameView.swift in Sources */,
+				676F445F2B7D841D0059328B /* ContentView.swift in Sources */,
+				67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */,
+				67661C952B83F1EB0049DBEF /* SkillClassifier+Singleton.swift in Sources */,
+				676F448A2B7D84C30059328B /* FrameHandler.swift in Sources */,
+				67A978FC2B8719DE00B605AB /* AVCaptureDeviceInput+Camera.swift in Sources */,
+				67661C912B83F0FB0049DBEF /* ActionPrediction.swift in Sources */,
+				676F44932B7D9B000059328B /* Pose+Empty.swift in Sources */,
+				67A979042B87FE8C00B605AB /* OverviewView.swift in Sources */,
+				676F44962B7DB13B0059328B /* PerformanceReporter.swift in Sources */,
+				676F44912B7D9AE80059328B /* Pose+Connection.swift in Sources */,
+				676F445D2B7D841D0059328B /* LiveCameraSwiftUIApp.swift in Sources */,
+				67661C9D2B83F25C0049DBEF /* SkillClassifier+PredictAction.swift in Sources */,
+				67661CA12B86E8AE0049DBEF /* FrameProcessingChain.swift in Sources */,
+				67661CA42B86F1E20049DBEF /* FrameViewModel.swift in Sources */,
+				676F448D2B7D9ABB0059328B /* Pose.swift in Sources */,
+				67A979072B88083500B605AB /* HomeView.swift in Sources */,
+				67A978FE2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift in Sources */,
+				67A979002B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		676F44662B7D841F0059328B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				676F446F2B7D841F0059328B /* LiveCameraSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		676F44702B7D841F0059328B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				676F44792B7D841F0059328B /* LiveCameraSwiftUIUITests.swift in Sources */,
+				676F447B2B7D841F0059328B /* LiveCameraSwiftUIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		676F446C2B7D841F0059328B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 676F44582B7D841D0059328B /* GymnAIstic */;
+			targetProxy = 676F446B2B7D841F0059328B /* PBXContainerItemProxy */;
+		};
+		676F44762B7D841F0059328B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 676F44582B7D841D0059328B /* GymnAIstic */;
+			targetProxy = 676F44752B7D841F0059328B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		676F447C2B7D841F0059328B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		676F447D2B7D841F0059328B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		676F447F2B7D841F0059328B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LiveCameraSwiftUI/LiveCameraSwiftUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LiveCameraSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveCameraSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-apple-samplecode.LiveCameraSwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		676F44802B7D841F0059328B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LiveCameraSwiftUI/LiveCameraSwiftUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LiveCameraSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveCameraSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-apple-samplecode.LiveCameraSwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		676F44822B7D841F0059328B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-apple-samplecode.LiveCameraSwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymnAIstic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GymnAIstic";
+			};
+			name = Debug;
+		};
+		676F44832B7D841F0059328B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-apple-samplecode.LiveCameraSwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymnAIstic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GymnAIstic";
+			};
+			name = Release;
+		};
+		676F44852B7D841F0059328B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-apple-samplecode.LiveCameraSwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = LiveCameraSwiftUI;
+			};
+			name = Debug;
+		};
+		676F44862B7D841F0059328B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y78ZPVMJT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example-apple-samplecode.LiveCameraSwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = LiveCameraSwiftUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		676F44542B7D841D0059328B /* Build configuration list for PBXProject "GymnAIstic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				676F447C2B7D841F0059328B /* Debug */,
+				676F447D2B7D841F0059328B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		676F447E2B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymnAIstic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				676F447F2B7D841F0059328B /* Debug */,
+				676F44802B7D841F0059328B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		676F44812B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymnAIsticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				676F44822B7D841F0059328B /* Debug */,
+				676F44832B7D841F0059328B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		676F44842B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymnAIsticUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				676F44852B7D841F0059328B /* Debug */,
+				676F44862B7D841F0059328B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 676F44512B7D841D0059328B /* Project object */;
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B88B0A52-55C9-451B-A721-D32CDBD33F1B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF8E2314-4E29-42AF-B78D-EAA46AB2E54A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveCameraSwiftUI/FrameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BF8E2314-4E29-42AF-B78D-EAA46AB2E54A - 4c05a48ed615002b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LiveCameraSwiftUI.FrameView.body.getter : some"
+                  moduleName = "LiveCameraSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/LiveCameraSwiftUI/LiveCameraSwiftUI/FrameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "BF8E2314-4E29-42AF-B78D-EAA46AB2E54A - 4c05a48ed615002b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LiveCameraSwiftUI.FrameView.body.getter : some"
+                  moduleName = "LiveCameraSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/LiveCameraSwiftUI/LiveCameraSwiftUI/FrameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56203043-B0CF-43B5-9343-11BBD7801482"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveCameraSwiftUI/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ContentView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D16180FE-1090-4D06-9B11-D1DFF9B44535"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveCameraSwiftUI/FrameHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "imageFromSampleBuffer(sampleBuffer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CAE1F452-CAFE-4955-9E13-2B067F2F80B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveCameraSwiftUI/FrameHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "captureOutput(_:didOutput:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60B142FA-FC67-4EEB-AA37-8306D86895DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveCameraSwiftUI/FrameHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "captureOutput(_:didOutput:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E55466C6-D98F-4A25-A86C-4B57375F1F1B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveCameraSwiftUI/FrameProcessingChain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "imageFromFrame(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E55466C6-D98F-4A25-A86C-4B57375F1F1B - 1ec219929860e4dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LiveCameraSwiftUI.FrameProcessingChain.imageFromFrame(__C.CMSampleBufferRef) -&gt; Swift.Optional&lt;__C.CGImageRef&gt;"
+                  moduleName = "LiveCameraSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/LiveCameraSwiftUI/LiveCameraSwiftUI/FrameProcessingChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "E55466C6-D98F-4A25-A86C-4B57375F1F1B - 1ec219929860e4bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LiveCameraSwiftUI.FrameProcessingChain.imageFromFrame(__C.CMSampleBufferRef) -&gt; Swift.Optional&lt;__C.CGImageRef&gt;"
+                  moduleName = "LiveCameraSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/LiveCameraSwiftUI/LiveCameraSwiftUI/FrameProcessingChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
