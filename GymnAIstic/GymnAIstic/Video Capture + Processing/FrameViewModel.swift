@@ -15,6 +15,7 @@ import UIKit
 class FrameViewModel: NSObject, ObservableObject {
     @Published var frame: CGImage?
     @Published var actionLabel: String?
+    @Published var skillsObserved: [ActionPrediction] = []
     
     let frameHandler = FrameHandler()
     let frameProcessingChain = FrameProcessingChain()
@@ -58,6 +59,7 @@ extension FrameViewModel: FrameProcessingChainDelegate {
             self.actionLabel = actionPrediction.label
 //            // Update the total number of frames for this action.
 //            addFrameCount(frameCount, to: actionPrediction.label)
+            addSkillObserved(actionPrediction)
             
         }
         
@@ -66,8 +68,26 @@ extension FrameViewModel: FrameProcessingChainDelegate {
     
 }
 
-// MARK: methods for drawing poses, updating labels, and counting frames
+// MARK: methods for drawing poses, updating labels, and counting frames, and adding to the list of skills observed
 extension FrameViewModel {
+    private func addSkillObserved(_ currentSkill: ActionPrediction) {
+        /// If observing the same skill, update the confidence
+        // MARK: this will not handle skills performed 2x in a row (e.g. bhs bhs). I need to come up with a soln for that. for now this will have to do.
+        if let lastSkill = skillsObserved.last {
+            if currentSkill.label == lastSkill.label {
+                if let lastIndex = skillsObserved.indices.last {
+                    skillsObserved[lastIndex] = currentSkill.confidence > lastSkill.confidence ? currentSkill : lastSkill
+                } else {
+                    print("ERROR IN UPDATING THE CONFIDENCE OF THE SKILL")
+                    return
+                }
+            } else {
+                skillsObserved.append(currentSkill)
+            }
+        } else {
+            skillsObserved.append(currentSkill)
+        }
+    }
     /// Draws poses as wireframes on top of a frame, and updates the user
     /// interface with the final image.
     /// - Parameters:

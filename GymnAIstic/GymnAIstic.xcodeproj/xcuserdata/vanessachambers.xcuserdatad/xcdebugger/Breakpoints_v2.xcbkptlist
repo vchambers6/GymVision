@@ -164,5 +164,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2492E113-65D1-4815-A419-AF97D56D234B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymnAIstic/Views/OverviewView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "OverviewView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "2492E113-65D1-4815-A419-AF97D56D234B - 599f926890edb794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymnAIstic.OverviewView.body.getter : some"
+                  moduleName = "GymnAIstic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymnAIstic/GymnAIstic/Views/OverviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "2492E113-65D1-4815-A419-AF97D56D234B - 599f926890edb794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymnAIstic.OverviewView.body.getter : some"
+                  moduleName = "GymnAIstic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymnAIstic/GymnAIstic/Views/OverviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

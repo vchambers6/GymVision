@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6756BA022B89B1A700DE1490 /* SkillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756BA012B89B1A700DE1490 /* SkillDetailView.swift */; };
+		6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756BA062B89B29E00DE1490 /* DataModels.swift */; };
 		67661C912B83F0FB0049DBEF /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C902B83F0FB0049DBEF /* ActionPrediction.swift */; };
 		67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 67661C922B83F1B80049DBEF /* SkillClassifier.mlmodel */; };
 		67661C952B83F1EB0049DBEF /* SkillClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C942B83F1EB0049DBEF /* SkillClassifier+Singleton.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6756BA012B89B1A700DE1490 /* SkillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailView.swift; sourceTree = "<group>"; };
+		6756BA062B89B29E00DE1490 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		67661C902B83F0FB0049DBEF /* ActionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
 		67661C922B83F1B80049DBEF /* SkillClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SkillClassifier.mlmodel; sourceTree = "<group>"; };
 		67661C942B83F1EB0049DBEF /* SkillClassifier+Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillClassifier+Singleton.swift"; sourceTree = "<group>"; };
@@ -117,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6756BA052B89B27000DE1490 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6756BA062B89B29E00DE1490 /* DataModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		67661C8F2B83F0EB0049DBEF /* Action Classifier */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				67A9790B2B8816E100B605AB /* Info.plist */,
+				6756BA052B89B27000DE1490 /* Models */,
 				67A979082B88083900B605AB /* Video Capture + Processing */,
 				67A979052B88080B00B605AB /* Views */,
 				67661C8F2B83F0EB0049DBEF /* Action Classifier */,
@@ -220,6 +233,7 @@
 				67A979012B87F98C00B605AB /* ActionClassifierCardView.swift */,
 				67A979032B87FE8C00B605AB /* OverviewView.swift */,
 				67A979062B88083500B605AB /* HomeView.swift */,
+				6756BA012B89B1A700DE1490 /* SkillDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,11 +388,13 @@
 				67661C992B83F2250049DBEF /* SkillClassifier+Label.swift in Sources */,
 				676F44882B7D84290059328B /* FrameView.swift in Sources */,
 				676F445F2B7D841D0059328B /* ContentView.swift in Sources */,
+				6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */,
 				67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */,
 				67661C952B83F1EB0049DBEF /* SkillClassifier+Singleton.swift in Sources */,
 				676F448A2B7D84C30059328B /* FrameHandler.swift in Sources */,
 				67A978FC2B8719DE00B605AB /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				67661C912B83F0FB0049DBEF /* ActionPrediction.swift in Sources */,
+				6756BA022B89B1A700DE1490 /* SkillDetailView.swift in Sources */,
 				676F44932B7D9B000059328B /* Pose+Empty.swift in Sources */,
 				67A979042B87FE8C00B605AB /* OverviewView.swift in Sources */,
 				676F44962B7DB13B0059328B /* PerformanceReporter.swift in Sources */,

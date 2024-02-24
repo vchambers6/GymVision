@@ -10,7 +10,7 @@ Bundles an action label with a confidence value.
 
 /// Bundles an action label with a confidence value.
 /// - Tag: ActionPrediction
-struct ActionPrediction {
+struct ActionPrediction: Hashable {
     /// The name of the action the Exercise Classifier predicted.
     let label: String
 
