@@ -10,6 +10,7 @@ import SwiftUI
 struct FrameView: View {
     
     @StateObject private var viewModel = FrameViewModel()
+    @State private var isCameraActive: Bool?
     
     var body: some View {
         
@@ -24,10 +25,13 @@ struct FrameView: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                     
                     /// Overview overlay button
-                    NavigationLink(destination: OverviewView(skillsObserved: viewModel.skillsObserved)) {
+                    NavigationLink(destination: OverviewView(isCameraActive: $isCameraActive, skillsObserved: viewModel.skillsObserved)) {
                         OverviewButton()
                             .padding()
                     }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .top)
+//                        .onDisappear(perform: {
+//                        isCameraActive = true
+//                    })
                     
                     /// Action classifier card
                     ActionClassifierCardView(skillLabel: viewModel.actionLabel ?? "No Skill").frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
@@ -35,6 +39,10 @@ struct FrameView: View {
                 ///Uncomment this to center the view vertically
 //                .frame(maxHeight: .infinity, alignment: .center)
 //                    .ignoresSafeArea().background(.black)
+            }.onChange(of: isCameraActive) {
+                // At this point, isCameraActive should be non-nil
+                guard let cameraEnabled = isCameraActive else  { return }
+                cameraEnabled ? viewModel.frameHandler.enableCaptureSession() : viewModel.frameHandler.disableCaptureSession()
             }
         } else {
             /// This is for preview purposes only. I may just comment this out
@@ -48,9 +56,10 @@ struct FrameView: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                     
                     /// Overview overlay button
-                    NavigationLink(destination: OverviewView(skillsObserved: [])) {
+                    NavigationLink(destination: OverviewView(isCameraActive: $isCameraActive, skillsObserved: [])) {
                         OverviewButton()
                             .padding()
+                        
                     }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topTrailing)
                     
                     /// Action classifier card

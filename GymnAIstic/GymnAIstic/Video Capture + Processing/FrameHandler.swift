@@ -83,11 +83,13 @@ class FrameHandler: NSObject, ObservableObject {
         }
     }
     
-    private func enableCaptureSession() {
+    // MARK: this func used to be private but i changed it because I want to use this functino in FrameView
+    func enableCaptureSession() {
         if !captureSession.isRunning { captureSession.startRunning() }
     }
 
-    private func disableCaptureSession() {
+    // MARK: this func used to be private but i changed it because I want to use this functino in FrameView
+    func disableCaptureSession() {
         if captureSession.isRunning { captureSession.stopRunning() }
     }
     
