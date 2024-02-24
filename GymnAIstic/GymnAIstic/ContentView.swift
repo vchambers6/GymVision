@@ -12,6 +12,7 @@ struct ContentView: View {
 //    @StateObject private var model = FrameHandler()
 //    @StateObject private var viewModel = FrameViewModel()
     var body: some View {
+        
         NavigationStack {
             VStack {
     //            FrameView(image: viewModel.frame, label: viewModel.actionLabel ?? "No Skill").ignoresSafeArea()

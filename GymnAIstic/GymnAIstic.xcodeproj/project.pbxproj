@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		674848D52B8A9AFB00D0C340 /* TopNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674848D42B8A9AFB00D0C340 /* TopNavigationBar.swift */; };
 		6756BA022B89B1A700DE1490 /* SkillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756BA012B89B1A700DE1490 /* SkillDetailView.swift */; };
 		6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756BA062B89B29E00DE1490 /* DataModels.swift */; };
 		67661C912B83F0FB0049DBEF /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C902B83F0FB0049DBEF /* ActionPrediction.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		674848D42B8A9AFB00D0C340 /* TopNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationBar.swift; sourceTree = "<group>"; };
 		6756BA012B89B1A700DE1490 /* SkillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailView.swift; sourceTree = "<group>"; };
 		6756BA062B89B29E00DE1490 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		67661C902B83F0FB0049DBEF /* ActionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				67A979032B87FE8C00B605AB /* OverviewView.swift */,
 				67A979062B88083500B605AB /* HomeView.swift */,
 				6756BA012B89B1A700DE1490 /* SkillDetailView.swift */,
+				674848D42B8A9AFB00D0C340 /* TopNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				67A979022B87F98C00B605AB /* ActionClassifierCardView.swift in Sources */,
 				67661C9B2B83F2390049DBEF /* SkillClassifier+LabelCheck.swift in Sources */,
 				676F448F2B7D9AD50059328B /* Pose+Landmark.swift in Sources */,
+				674848D52B8A9AFB00D0C340 /* TopNavigationBar.swift in Sources */,
 				67661C992B83F2250049DBEF /* SkillClassifier+Label.swift in Sources */,
 				676F44882B7D84290059328B /* FrameView.swift in Sources */,
 				676F445F2B7D841D0059328B /* ContentView.swift in Sources */,
