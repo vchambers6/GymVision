@@ -7,10 +7,13 @@ Bundles an action label with a confidence value.
  represent when the camera frame is devoid of people or when the model's
  confidence isn't high enough.
 */
+import Foundation
 
 /// Bundles an action label with a confidence value.
 /// - Tag: ActionPrediction
-struct ActionPrediction: Hashable {
+struct ActionPrediction: Hashable, Identifiable {
+    var id = UUID()
+    
     /// The name of the action the Exercise Classifier predicted.
     let label: String
 

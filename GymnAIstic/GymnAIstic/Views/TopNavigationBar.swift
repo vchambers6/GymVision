@@ -24,6 +24,7 @@ struct BackButton: View {
         
     }
 }
+
 //struct TopNavigationBar: View {
 //    var title: String?
 //    var backButtonTitle: String = "Back"

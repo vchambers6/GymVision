@@ -11,8 +11,9 @@ struct FrameView: View {
     
     @StateObject private var viewModel = FrameViewModel()
     @State private var isCameraActive: Bool?
+    @State private var showTimeoutView = false
     
-    // This is for dismissing views -- because I am using a custom nav bar
+    /// This is for dismissing views -- because I am using a custom nav bar in this view
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
@@ -35,39 +36,45 @@ struct FrameView: View {
 //                            .aspectRatio(contentMode: .fill)
 //                            .frame(width: geo.size.width, height: geo.size.height)
                         
-                        /// Back button
+                        /// Custom back button; returns to home view on tap
                         BackButton(buttonTitle: "Home") {
                             presentationMode.wrappedValue.dismiss()
                         }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topLeading).padding()
-//                        TopNavigationBar(backButtonTitle: "Home") {
-//                            // Dismiss the view when the custom back button is tapped
-//
-//                        }
+
                         /// Overview overlay button
                         NavigationLink(destination: OverviewView(isCameraActive: $isCameraActive, skillsObserved: viewModel.skillsObserved)) {
                             OverviewButton()
                                 .padding()
                         }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topTrailing)
-    //                        .onDisappear(perform: {
-    //                        isCameraActive = true
-    //                    })
                         
                         /// Action classifier card
-                        ActionClassifierCardView(skillLabel: viewModel.actionLabel ?? "No Skill").frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
+                        ActionClassifierCardView(skillLabel: viewModel.actionLabel ?? "No Skill Observed", confidence: viewModel.confidenceString).frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
                     }
                 }.navigationBarHidden(true)
                 
                 .background(.black).navigationBarHidden(true)
-                ///Uncomment this to center the view vertically
-//                .frame(maxHeight: .infinity, alignment: .center)
-//                    .ignoresSafeArea().background(.black)
-            }.onChange(of: isCameraActive) {
-                // At this point, isCameraActive should be non-nil
+            }
+            /// This pauses the frame capture + processing when navigating to the OverviewView
+            .onChange(of: isCameraActive) {
+                /// At this point, isCameraActive should be non-nil
                 guard let cameraEnabled = isCameraActive else  { return }
                 cameraEnabled ? viewModel.frameHandler.enableCaptureSession() : viewModel.frameHandler.disableCaptureSession()
             }
         } else {
-            Text("AI feature unavailable.")
+            if showTimeoutView {
+                Text("AI feature failed to load.")
+            } else {
+                ProgressView {
+                    Text("Loading AI feature...").onAppear {
+                        /// If video feature doesn't load after 10 seconds, show the timeout view.
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                            if self.viewModel.frame == nil {
+                                self.showTimeoutView = true
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

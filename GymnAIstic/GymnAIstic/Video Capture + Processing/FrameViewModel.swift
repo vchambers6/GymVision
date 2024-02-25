@@ -15,6 +15,7 @@ import UIKit
 class FrameViewModel: NSObject, ObservableObject {
     @Published var frame: CGImage?
     @Published var actionLabel: String?
+    @Published var confidenceString: String?
     @Published var skillsObserved: [ActionPrediction] = []
     
     let frameHandler = FrameHandler()
@@ -57,6 +58,7 @@ extension FrameViewModel: FrameProcessingChainDelegate {
         // TODO: need to increment frame count through func addFrameCount
         if actionPrediction.isModelLabel {
             self.actionLabel = actionPrediction.label
+            self.confidenceString = actionPrediction.confidenceString
 //            // Update the total number of frames for this action.
 //            addFrameCount(frameCount, to: actionPrediction.label)
             addSkillObserved(actionPrediction)

@@ -174,8 +174,8 @@
             filePath = "GymnAIstic/Views/OverviewView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "OverviewView"
             landmarkType = "14">
             <Locations>
@@ -222,8 +222,8 @@
             filePath = "GymnAIstic/Views/FrameView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -270,8 +270,8 @@
             filePath = "GymnAIstic/Views/OverviewView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -286,8 +286,8 @@
             filePath = "GymnAIstic/Views/OverviewView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -335,6 +335,102 @@
                   startingLineNumber = "35"
                   endingLineNumber = "35"
                   offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D292B0EE-1B04-4C8E-9109-78A3C6DE471E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymnAIstic/Views/OverviewView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D292B0EE-1B04-4C8E-9109-78A3C6DE471E - 7a80e1b5b5de7eec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleTableColumnContent&lt;GymnAIstic.ActionPrediction, Swift.Never, (SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.Table&lt;GymnAIstic.ActionPrediction, SwiftUI.TableForEachContent&lt;Swift.Array&lt;GymnAIstic.ActionPrediction&gt;&gt;, SwiftUI.TupleTableColumnContent&lt;GymnAIstic.ActionPrediction, Swift.Never, (SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;)&gt;&gt; in GymnAIstic.OverviewView.body.getter : some"
+                  moduleName = "GymnAIstic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymnAIstic/GymnAIstic/Views/OverviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "544">
+               </Location>
+               <Location
+                  uuid = "D292B0EE-1B04-4C8E-9109-78A3C6DE471E - 65b1396bac8ea41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GymnAIstic.ActionPrediction) -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.TupleTableColumnContent&lt;GymnAIstic.ActionPrediction, Swift.Never, (SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.Table&lt;GymnAIstic.ActionPrediction, SwiftUI.TableForEachContent&lt;Swift.Array&lt;GymnAIstic.ActionPrediction&gt;&gt;, SwiftUI.TupleTableColumnContent&lt;GymnAIstic.ActionPrediction, Swift.Never, (SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;)&gt;&gt; in GymnAIstic.OverviewView.body.getter : some"
+                  moduleName = "GymnAIstic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymnAIstic/GymnAIstic/Views/OverviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16529BF5-D671-4E05-AE33-56F1C9A2ED54"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymnAIstic/Views/OverviewView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "16529BF5-D671-4E05-AE33-56F1C9A2ED54 - 65b1396bac8ea20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GymnAIstic.ActionPrediction) -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.TupleTableColumnContent&lt;GymnAIstic.ActionPrediction, Swift.Never, (SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.Table&lt;GymnAIstic.ActionPrediction, SwiftUI.TableForEachContent&lt;Swift.Array&lt;GymnAIstic.ActionPrediction&gt;&gt;, SwiftUI.TupleTableColumnContent&lt;GymnAIstic.ActionPrediction, Swift.Never, (SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;)&gt;&gt; in GymnAIstic.OverviewView.body.getter : some"
+                  moduleName = "GymnAIstic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymnAIstic/GymnAIstic/Views/OverviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "16529BF5-D671-4E05-AE33-56F1C9A2ED54 - 225e8675c9858fc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI.Table&lt;GymnAIstic.ActionPrediction, SwiftUI.TableForEachContent&lt;Swift.Array&lt;GymnAIstic.ActionPrediction&gt;&gt;, SwiftUI.TableColumn&lt;GymnAIstic.ActionPrediction, Swift.Never, SwiftUI.Text, SwiftUI.Text&gt;&gt; in GymnAIstic.OverviewView.body.getter : some"
+                  moduleName = "GymnAIstic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymnAIstic/GymnAIstic/Views/OverviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "464">
                </Location>
             </Locations>
          </BreakpointContent>
