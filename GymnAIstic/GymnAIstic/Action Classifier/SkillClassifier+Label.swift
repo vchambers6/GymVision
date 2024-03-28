@@ -32,6 +32,21 @@ extension SkillClassifier {
             self = label
             
         }
+        
+        var copNumber: Double {
+            switch self {
+            case .backHandspringStepout: return 35.204
+            case .backLayoutStepout: return 35.312
+            case .backTuck: return 35.312
+            case .frontAerial: return 35.409
+            case .frontTuck: return 35.410
+            case .fullTurn: return 33.101
+            case .lTurn: return 33.304
+            case .sheepJump: return 32.308
+            case .sideAerial: return 35.408
+            case .splitJump: return 32.202
+            }
+        }
     }
 }
 

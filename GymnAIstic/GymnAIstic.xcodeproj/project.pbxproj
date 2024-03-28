@@ -270,6 +270,8 @@
 			dependencies = (
 			);
 			name = GymnAIstic;
+			packageProductDependencies = (
+			);
 			productName = LiveCameraSwiftUI;
 			productReference = 676F44592B7D841D0059328B /* GymnAIstic.app */;
 			productType = "com.apple.product-type.application";
@@ -342,6 +344,8 @@
 				Base,
 			);
 			mainGroup = 676F44502B7D841D0059328B;
+			packageReferences = (
+			);
 			productRefGroup = 676F445A2B7D841D0059328B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

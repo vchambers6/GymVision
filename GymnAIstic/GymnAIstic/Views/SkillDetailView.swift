@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SkillDetailView: View {
+    var skillCOPNumber: Double
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(String(skillCOPNumber))
     }
 }
 
 #Preview {
-    SkillDetailView()
+    SkillDetailView(skillCOPNumber: 35.204)
 }

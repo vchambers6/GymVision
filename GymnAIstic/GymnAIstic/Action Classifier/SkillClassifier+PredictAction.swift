@@ -17,9 +17,10 @@ extension SkillClassifier {
         do {
             let output = try prediction(poses: window)
             let action = Label(output.label)
+            let copNumber = action.copNumber
             let confidence = output.labelProbabilities[output.label]!
 
-            return ActionPrediction(label: action.rawValue, confidence: confidence)
+            return ActionPrediction(label: action.rawValue, confidence: confidence, copNumber: copNumber)
 
         } catch {
             fatalError("SkillClassifier prediction error: \(error)")

@@ -16,9 +16,14 @@ struct ActionPrediction: Hashable, Identifiable {
     
     /// The name of the action the Exercise Classifier predicted.
     let label: String
+    
 
     /// The Exercise Classifier's confidence in its prediction.
     let confidence: Double!
+    
+    
+    /// Exercise number in the code of points -- this will be used to identify the skill in the skillDetailView
+    let copNumber: Double!
 
     /// A string that represents the confidence as percentage if applicable;
     /// otherwise `nil`.
@@ -33,9 +38,10 @@ struct ActionPrediction: Hashable, Identifiable {
         return String(format: formatString, percent)
     }
 
-    init(label: String, confidence: Double) {
+    init(label: String, confidence: Double, copNumber: Double) {
         self.label = label
         self.confidence = confidence
+        self.copNumber = copNumber
     }
 }
 
@@ -69,6 +75,7 @@ extension ActionPrediction {
     private init(_ otherLabel: AppLabel) {
         label = otherLabel.rawValue
         confidence = nil
+        copNumber = nil
     }
 
     /// A Boolean that indicates whether the label is from the action classifier model.
