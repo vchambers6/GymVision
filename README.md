@@ -1,2 +1,2 @@
-# GymnAIstic
-The first iteration of GymnAIstic
+# GymVision
+The first iteration of GymVision
