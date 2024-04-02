@@ -10,6 +10,7 @@ import SwiftUI
 struct SkillDetailView: View {
     @StateObject var viewModel = SkillDetailViewModel()
     let uuidString: String
+    @State private var loadingFailed = false
     
 //    var skillCOPNumber: Double
     var body: some View {
@@ -72,7 +73,23 @@ struct SkillDetailView: View {
         //            Text(String(skillCOPNumber))
         //        }
         VStack {
-            Text(viewModel.skill?.name ?? "❌ FAILED")
+            if let skill = viewModel.skill {
+                Text("Skill name \(skill.name)")
+                Text("Skill description \(skill.description)")
+            } else if loadingFailed {
+                Text("🥲 GymVision failed to load skill details")
+            } else {
+                ProgressView {
+                    Text("🤸🏾‍♂️Loading Skill Details...").onAppear {
+                        /// If video feature doesn't load after 10 seconds, show the timeout view.
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                            if self.viewModel.skill == nil {
+                                self.loadingFailed = true
+                            }
+                        }
+                    }
+                }
+            }
         }.onAppear {
             Task {
                 do {
@@ -88,7 +105,7 @@ struct SkillDetailView: View {
 }
 
 #Preview {
-    SkillDetailView(viewModel: SkillDetailViewModel(), uuidString: "212F18A9-127F-43D4-984E-8FA174C0C240")
+    SkillDetailView(uuidString: "212F18A9-127F-43D4-984E-8FA174C0C240")
 }
 //
 //let skillsDictionary: [Double: Skill] = [
