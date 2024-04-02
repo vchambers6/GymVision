@@ -18,7 +18,7 @@ struct BackButton: View {
             backButtonAction()
         }) {
             Image(systemName: "chevron.left")
-            Text(buttonTitle)
+            Text(buttonTitle).font(AppFonts.PlainText.font)
         }
         .foregroundColor(.blue)
         

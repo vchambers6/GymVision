@@ -21,39 +21,54 @@ struct FrameView: View {
         if let image = viewModel.frame {
         /// Uncomment this for preview purposes
 //        if true {
-            GeometryReader { geo in
-                VStack {
-                    ZStack(alignment: .center) {
-                        /// Full screen image
-                        Image(image, scale: 3.0, orientation: .up, label: Text("Gymnast Performing \(viewModel.actionLabel ?? "" ) Skill"))
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: geo.size.width, height: geo.size.height)
-                        
-                        /// Uncomment this for preview purposes
-//                        Image("simone")
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fill)
-//                            .frame(width: geo.size.width, height: geo.size.height)
-                        
-                        /// Custom back button; returns to home view on tap
+            NavigationView {
+                GeometryReader { geo in
+                    VStack {
+                        ZStack(alignment: .center) {
+                            /// Full screen image
+                            Image(image, scale: 3.0, orientation: .up, label: Text("Gymnast Performing \(viewModel.actionLabel ?? "" ) Skill"))
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+//                                .frame(width: geo.size.width, height: geo.size.height)
+                                .frame(maxHeight: .infinity).ignoresSafeArea()
+                            
+                            /// Uncomment this for preview purposes
+                            //                        Image("simone")
+                            //                            .resizable()
+                            //                            .aspectRatio(contentMode: .fill)
+                            //                            .frame(width: geo.size.width, height: geo.size.height)
+                            
+                            /// Custom back button; returns to home view on tap
+//                            BackButton(buttonTitle: "Home") {
+//                                presentationMode.wrappedValue.dismiss()
+//                            }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topLeading).padding()
+//                            
+//                            /// Overview overlay button
+//                            NavigationLink(destination: OverviewView(isCameraActive: $isCameraActive, skillsObserved: viewModel.skillsObserved)) {
+//                                OverviewButton()
+//                                    .padding()
+//                            }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topTrailing)
+                            
+                            /// Action classifier card
+                            ActionClassifierCardView(skillLabel: viewModel.actionLabel ?? "No Skill Observed", confidence: viewModel.confidenceString).frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
+                        }
+                    }
+                    
+                        .background(.black)
+                }
+            }.background(.black)
+                .navigationBarTitleDisplayMode(.inline).toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
                         BackButton(buttonTitle: "Home") {
-                            presentationMode.wrappedValue.dismiss()
-                        }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topLeading).padding()
-
-                        /// Overview overlay button
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink(destination: OverviewView(isCameraActive: $isCameraActive, skillsObserved: viewModel.skillsObserved)) {
                             OverviewButton()
-                                .padding()
-                        }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topTrailing)
-                        
-                        /// Action classifier card
-                        ActionClassifierCardView(skillLabel: viewModel.actionLabel ?? "No Skill Observed", confidence: viewModel.confidenceString).frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
+                        }
                     }
-                }.navigationBarHidden(true)
-                
-                .background(.black).navigationBarHidden(true)
-            }
+                }.navigationBarBackButtonHidden()
             /// This pauses the frame capture + processing when navigating to the OverviewView
             .onChange(of: isCameraActive) {
                 /// At this point, isCameraActive should be non-nil

@@ -14,22 +14,36 @@ struct OverviewView: View {
     var skillsObserved: [ActionPrediction]
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.presentationMode) var presentationMode
     
+
     var body: some View {
-            VStack {
-                List(skillsObserved) { skill in
-                    // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string
-                    NavigationLink(destination: SkillDetailView(uuidString: skill.uuidString)) {
-                        SkillTableRowView(skill: skill.label, confidence: skill.confidenceString!)
+        NavigationView {
+                VStack {
+                    List(skillsObserved) { skill in
+                        // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string
+                        NavigationLink(destination: SkillDetailView(uuidString: skill.uuidString)) {
+                            SkillTableRowView(skill: skill.label, confidence: skill.confidenceString!)
+                        }
                     }
                 }
-                .navigationTitle("Overview")
+                
+                
             }.frame(alignment: .center)
         .onAppear(perform: {
             isCameraActive = false
         }).onDisappear(perform: {
             isCameraActive = true
-        }).navigationBarTitle("Skills Observed", displayMode: .inline)
+        }).navigationBarTitleDisplayMode(.inline).toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Skills Observed").font(AppFonts.PlainTextBold.font)
+            }
+            ToolbarItem(placement: .topBarLeading) {
+                BackButton {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+            }
+        }.navigationBarBackButtonHidden()
         
     }
 }
@@ -40,9 +54,9 @@ struct SkillTableRowView: View {
     
     var body: some View {
         HStack {
-            Text(skill).padding(.leading, 5)
+            Text(skill).padding(.leading, 5).font(AppFonts.PlainText.font)
             Spacer()
-            Text("Confidence: \(confidence)").padding(.trailing, 5).minimumScaleFactor(0.5).lineLimit(1)
+            Text("Confidence: \(confidence)").padding(.trailing, 5).minimumScaleFactor(0.5).lineLimit(1).font(AppFonts.PlainText.font)
         }
     }
 }

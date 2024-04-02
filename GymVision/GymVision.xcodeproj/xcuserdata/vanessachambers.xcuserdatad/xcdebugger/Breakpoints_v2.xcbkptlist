@@ -306,36 +306,6 @@
             endingLineNumber = "12"
             landmarkName = "SkillDetailView"
             landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "38259352-2D45-4C03-B367-1B495C9CB1CE - 7d661074d0f715c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of GymVision.SkillDetailView.loadingFailed : Swift.Bool"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/Views/SkillDetailView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0">
-               </Location>
-               <Location
-                  uuid = "38259352-2D45-4C03-B367-1B495C9CB1CE - acfdeaf55f89b974"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GymVision.SkillDetailView.init(viewModel: @autoclosure () -&gt; GymVision.SkillDetailViewModel, uuidString: Swift.String) -&gt; GymVision.SkillDetailView"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/Views/SkillDetailView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
