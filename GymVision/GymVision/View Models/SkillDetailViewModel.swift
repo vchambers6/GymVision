@@ -20,6 +20,7 @@ class SkillDetailViewModel: ObservableObject {
             throw HttpError.badUrl
         }
         
+        
         let skillResponse: Skill = try await HttpClient.shared.fetchSingle(url: url)
         
         DispatchQueue.main.async {

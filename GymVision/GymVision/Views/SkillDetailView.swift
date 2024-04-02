@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SkillDetailView: View {
-    @ObservedObject var viewModel: SkillDetailViewModel
+    @StateObject var viewModel = SkillDetailViewModel()
     let uuidString: String
     
 //    var skillCOPNumber: Double
@@ -88,7 +88,7 @@ struct SkillDetailView: View {
 }
 
 #Preview {
-    SkillDetailView(viewModel: SkillDetailViewModel(), uuidString: "FCE5B365-C1F1-4DAA-BC9F-10110A95B13B")
+    SkillDetailView(viewModel: SkillDetailViewModel(), uuidString: "212F18A9-127F-43D4-984E-8FA174C0C240")
 }
 //
 //let skillsDictionary: [Double: Skill] = [

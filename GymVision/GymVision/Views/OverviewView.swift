@@ -19,7 +19,7 @@ struct OverviewView: View {
             VStack {
                 List(skillsObserved) { skill in
                     // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string
-                    NavigationLink(destination: SkillDetailView(viewModel: SkillDetailViewModel(), uuidString: "FCE5B365-C1F1-4DAA-BC9F-10110A95B13B")) {
+                    NavigationLink(destination: SkillDetailView(uuidString: skill.uuidString)) {
                         SkillTableRowView(skill: skill.label, confidence: skill.confidenceString!)
                     }
                 }

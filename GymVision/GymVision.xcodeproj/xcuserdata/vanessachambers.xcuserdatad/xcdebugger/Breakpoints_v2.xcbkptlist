@@ -200,7 +200,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6A9B6D19-CC56-406D-956E-8D1D6FD6437D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GymVision/View Models/SkillDetailViewModel.swift"
@@ -216,120 +216,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FF6661AD-CCD5-4185-B60E-EF454F8A55C8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GymVision/View Models/SkillDetailViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "fetchSkill(at:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FF6661AD-CCD5-4185-B60E-EF454F8A55C8 - af543b1269032d54"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for GymVision.SkillDetailViewModel.fetchSkill(at: Swift.String) async throws -&gt; ()"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/View%20Models/SkillDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
-               </Location>
-               <Location
-                  uuid = "FF6661AD-CCD5-4185-B60E-EF454F8A55C8 - 704f483f6773c159"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for GymVision.SkillDetailViewModel.fetchSkill(at: Swift.String) async throws -&gt; ()"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/View%20Models/SkillDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
-               </Location>
-               <Location
-                  uuid = "FF6661AD-CCD5-4185-B60E-EF454F8A55C8 - 9c73a17dcfb99156"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for GymVision.SkillDetailViewModel.fetchSkill(at: Swift.String) async throws -&gt; ()"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/View%20Models/SkillDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
-               </Location>
-               <Location
-                  uuid = "FF6661AD-CCD5-4185-B60E-EF454F8A55C8 - 74e36256f10d3757"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for GymVision.SkillDetailViewModel.fetchSkill(at: Swift.String) async throws -&gt; ()"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/View%20Models/SkillDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "199579C5-06C4-4208-B7C9-6D0DC91E8682"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GymVision/View Models/SkillDetailViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "fetchSkill(at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "199579C5-06C4-4208-B7C9-6D0DC91E8682 - 9c73a17dcfb99110"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for GymVision.SkillDetailViewModel.fetchSkill(at: Swift.String) async throws -&gt; ()"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/View%20Models/SkillDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25">
-               </Location>
-               <Location
-                  uuid = "199579C5-06C4-4208-B7C9-6D0DC91E8682 - eb561b3acf73b0c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in GymVision.SkillDetailViewModel.fetchSkill(at: Swift.String) async throws -&gt; ()"
-                  moduleName = "GymVision"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vanessachambers/Documents/gymnaistic%20project/GymnAIstic/GymVision/GymVision/View%20Models/SkillDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -394,6 +290,54 @@
             endingLineNumber = "32"
             landmarkName = "fetch(url:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6AF067D-57DF-46DC-BAE9-7964CF340EFD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymVision/Views/SkillDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38259352-2D45-4C03-B367-1B495C9CB1CE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymVision/Views/SkillDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "SkillDetailView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EDE275D-7F0B-435A-8F5B-C0CAA1380890"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymVision/Views/SkillDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

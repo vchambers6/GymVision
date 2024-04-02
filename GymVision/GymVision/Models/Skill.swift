@@ -7,16 +7,17 @@
 
 import Foundation
 
-final class Skill: Identifiable, Codable {
+struct Skill: Identifiable, Codable {
     var id: UUID?
     var name: String
     var discipline: Discipline
     var apparatus: Apparatus
     var difficultyValue: DifficultyValue?
-    var vaultDifficultyValue: Float?
+    var vaultDifficultyValue: Double?
     var description: String
-    var copNumber: Float?
-    var groupNumber: Int?
+    var copNumber: Double?
+    var vaultCopNumber: Double?
+    var groupNumber: Int
     var namedAfter: String?
     
     
