@@ -19,24 +19,28 @@ struct OverviewView: View {
 
     var body: some View {
         NavigationView {
-                VStack {
+                
+            VStack {
+                    
                     List(skillsObserved) { skill in
                         // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string
                         NavigationLink(destination: SkillDetailView(uuidString: skill.uuidString)) {
                             SkillTableRowView(skill: skill.label, confidence: skill.confidenceString!)
                         }
-                    }
-                }
+                        
+                    }.background(Color.mnPrimaryThemeBG)
+                    .scrollContentBackground(.hidden)
+
+            }
                 
-                
-            }.frame(alignment: .center)
+        }.frame(alignment: .center)
         .onAppear(perform: {
             isCameraActive = false
         }).onDisappear(perform: {
             isCameraActive = true
         }).navigationBarTitleDisplayMode(.inline).toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Skills Observed").font(AppFonts.PlainTextBold.font)
+                Text("Skills Observed").font(AppFonts.PlainTextSemiBold.font)
             }
             ToolbarItem(placement: .topBarLeading) {
                 BackButton {

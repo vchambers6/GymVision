@@ -97,11 +97,11 @@ struct FrameView: View {
 struct OverviewButton: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25).fill(Color.gray.opacity(0.6))
+            RoundedRectangle(cornerRadius: 25).fill(Color.mnBtnBG.opacity(0.5))
             Label(
                 title: {
                     Text("Overview")
-                        .font(.headline)
+                        .font(AppFonts.PlainTextSemiBold.font)
                         .foregroundColor(.white)
                 },
                 icon: {

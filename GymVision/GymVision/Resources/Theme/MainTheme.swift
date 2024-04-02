@@ -12,8 +12,23 @@ struct AppFonts {
         static let font: Font = .custom("Poppins-Light", size: 18.0)
         static let color: Color = .black
     }
-    struct PlainTextBold {
-        static let font: Font = .custom("Poppins-Bold", size: 18.0)
+    struct PlainTextSemiBold {
+        static let font: Font = .custom("Poppins-SemiBold", size: 18.0)
+        static let color: Color = .black
+    }
+    
+    struct LargeTitle {
+        static let font: Font = .custom("Poppins-Light", size: 34.0)
+        static let color: Color = .black
+    }
+    
+    struct TextTitleSecondary {
+        static let font: Font = .custom("Poppins-Light", size: 24.0)
+        static let color: Color = .secondary
+    }
+    
+    struct LargeTitleBold {
+        static let font: Font = .custom("Poppins-ExtraBold", size: 34.0)
         static let color: Color = .black
     }
     

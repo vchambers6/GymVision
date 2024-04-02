@@ -23,7 +23,6 @@ struct HomeView: View {
             VStack {
                 Text("GymVision uses computer vision technology to tell you what gymnastis skill you are looking at. ").padding(30).multilineTextAlignment(.leading).font(AppFonts.PlainText.font)
             NavigationLink {
-                // TODO: Need to navigate to OverviewView and build out that UI
                 FrameView()
             } label: {
                 ZStack {
