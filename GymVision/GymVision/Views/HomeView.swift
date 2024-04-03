@@ -46,7 +46,19 @@ struct HomeView: View {
                 
             }.padding(30)
             Text("Tap the above button, and aim your device camera at a gymnastics routine to begin!").padding(30).font(AppFonts.PlainText.font).multilineTextAlignment(.leading)
-        }.navigationBarItems(leading: Text("GymVision"))
+        }.navigationBarTitleDisplayMode(.inline).toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Text("GymVision").font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.mnBtnBG)
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                NavigationLink(destination: SearchView()) {
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundStyle(Color.mnBtnBG)
+                }
+            }
+        }.navigationBarBackButtonHidden(true) 
         }
          
     }

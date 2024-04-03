@@ -28,7 +28,10 @@ class HttpClient {
             throw HttpError.badResponse
         }
         
-        guard let object = try? JSONDecoder().decode([T].self, from:  data) else {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        guard let object = try? decoder.decode([T].self, from:  data) else {
             throw HttpError.errorDecodingData
         }
         

@@ -54,13 +54,16 @@ struct OverviewView: View {
 
 struct SkillTableRowView: View {
     var skill: String
-    var confidence: String
+    var confidence: String?
     
     var body: some View {
         HStack {
             Text(skill).padding(.leading, 5).font(AppFonts.PlainText.font)
-            Spacer()
-            Text("Confidence: \(confidence)").padding(.trailing, 5).minimumScaleFactor(0.5).lineLimit(1).font(AppFonts.PlainText.font)
+            if let confidence = confidence {
+                Spacer()
+                Text("Confidence: \(confidence)").padding(.trailing, 5).minimumScaleFactor(0.5).lineLimit(1).font(AppFonts.PlainText.font)
+            }
+            
         }
     }
 }

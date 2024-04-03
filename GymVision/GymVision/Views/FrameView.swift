@@ -76,24 +76,33 @@ struct FrameView: View {
                 cameraEnabled ? viewModel.frameHandler.enableCaptureSession() : viewModel.frameHandler.disableCaptureSession()
             }
         } else {
-            if showTimeoutView {
-                Text("AI feature failed to load.")
-            } else {
-                ProgressView {
-                    Text("Loading AI feature...").onAppear {
-                        /// If video feature doesn't load after 10 seconds, show the timeout view.
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                            if self.viewModel.frame == nil {
-                                self.showTimeoutView = true
+            NavigationView {
+                if showTimeoutView {
+                    Text("AI feature failed to load.")
+                } else {
+                    ProgressView {
+                        Text("Loading AI feature...").onAppear {
+                            /// If video feature doesn't load after 10 seconds, show the timeout view.
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                                if self.viewModel.frame == nil {
+                                    self.showTimeoutView = true
+                                }
                             }
                         }
                     }
                 }
-            }
+            }.toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    BackButton(buttonTitle: "Home") {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                }
+            }.navigationBarBackButtonHidden()
         }
     }
 }
 
+// the button background is not showing up at all I don't think
 struct OverviewButton: View {
     var body: some View {
         ZStack {

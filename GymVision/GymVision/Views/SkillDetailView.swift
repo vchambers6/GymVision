@@ -107,6 +107,14 @@ struct SkillDetailView: View {
 #Preview {
     SkillDetailView(uuidString: "212F18A9-127F-43D4-984E-8FA174C0C240")
 }
+
+
+struct StaticSkillDetailView: View {
+    
+    var body: some View  {
+        Text("hello world")
+    }
+}
 //
 //let skillsDictionary: [Double: Skill] = [
 //    35.204 : Skill(copNumber: 35.204, name: "Back Handspring Stepout", description: #"""Flic-flac with step-out, also with support on one arm"""#, apparatus: .BB, difficultyValue: "B", gifName: "back_handspring_so_3")

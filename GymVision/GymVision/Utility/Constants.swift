@@ -13,4 +13,5 @@ enum Constants {
 
 enum Endpoints {
     static let skills = "skills/"
+    static let search = "search/"
 }
