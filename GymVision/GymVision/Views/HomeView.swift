@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
 //    @StateObject private var viewModel = FrameViewModel()
     @EnvironmentObject var themeManager: ThemeManager
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
     
         ZStack {
@@ -21,44 +22,40 @@ struct HomeView: View {
            
             
             VStack {
-                Text("GymVision uses computer vision technology to tell you what gymnastis skill you are looking at. ").padding(30).multilineTextAlignment(.leading).font(AppFonts.PlainText.font)
-            NavigationLink {
-                FrameView()
-            } label: {
-                ZStack {
-                    Circle()
-                        .foregroundColor(.mnBtnBG) // Adjust color as needed
-                        .frame(width: 100, height: 100) // Adjust size as needed
-                    Image(systemName: "camera.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(.mnIcon) // Adjust color as needed
-                        .frame(width: 50, height: 50) // Adjust size as needed
-                }.shadow(color: Color.white.opacity(0.3), radius: 20, x: 0, y: 5)
-                //                Text("GO")
-                //                    .foregroundColor(.black)
-                //                    .font(.title)
-                //                    .padding()
-                //                    .frame(width: 300, height: 140)
-                //                    .background(Color.white)
-                //                    .clipShape(Circle())
-                //                    .shadow(color: Color.pink.opacity(0.3), radius: 10, x: 0, y: 5)
-                
-            }.padding(30)
-            Text("Tap the above button, and aim your device camera at a gymnastics routine to begin!").padding(30).font(AppFonts.PlainText.font).multilineTextAlignment(.leading)
-        }.navigationBarTitleDisplayMode(.inline).toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Text("GymVision").font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.mnBtnBG)
-            }
-            ToolbarItem(placement: .topBarTrailing) {
-                NavigationLink(destination: SearchView()) {
-                    Image(systemName: "magnifyingglass")
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .foregroundStyle(Color.mnBtnBG)
+                Spacer()
+                VStack {
+                    Text("GymVision uses computer vision technology to tell you what gymnastis skill you are looking at. \n \n \nTap the button below, and aim your device camera at a gymnastics routine to begin!").multilineTextAlignment(.leading).font(AppFonts.PlainText.font).padding(30)
                 }
-            }
-        }.navigationBarBackButtonHidden(true) 
+                
+                Spacer()
+                NavigationLink {
+                    FrameView()
+                } label: {
+                    ZStack {
+                        Circle().stroke(colorScheme == .dark ? Color.mnAccent : Color.clear)
+                            .fill(.mnBtnBG)
+                            .frame(width: 100, height: 100)
+
+                        Image(systemName: "camera.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.mnIconText) // Adjust color as needed
+                            .frame(width: 50, height: 50) // Adjust size as needed
+                    }
+                }.padding(30)
+            }.navigationBarTitleDisplayMode(.inline).toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("GymVision").font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.mnAccent)
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink(destination: SearchView()) {
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.mnAccent)
+                    }
+                }
+            }.navigationBarBackButtonHidden()
         }
          
     }
