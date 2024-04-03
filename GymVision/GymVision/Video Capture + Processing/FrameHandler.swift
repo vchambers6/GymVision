@@ -85,12 +85,20 @@ class FrameHandler: NSObject, ObservableObject {
     
     // MARK: this func used to be private but i changed it because I want to use this functino in FrameView
     func enableCaptureSession() {
-        if !captureSession.isRunning { captureSession.startRunning() }
+        if !captureSession.isRunning {
+            DispatchQueue.global(qos: .userInteractive).async { [unowned self] in
+                captureSession.startRunning()
+            }
+        }
     }
 
     // MARK: this func used to be private but i changed it because I want to use this functino in FrameView
     func disableCaptureSession() {
-        if captureSession.isRunning { captureSession.stopRunning() }
+        if captureSession.isRunning {
+            DispatchQueue.global(qos: .userInteractive).async { [unowned self] in
+                captureSession.stopRunning()
+            }
+        }
     }
     
     /// Creates a video frame publisher by starting or reconfiguring the

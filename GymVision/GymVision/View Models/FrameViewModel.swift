@@ -29,6 +29,24 @@ class FrameViewModel: NSObject, ObservableObject {
         frameHandler.delegate = self
         frameProcessingChain.delegate = self
     }
+    
+    func stopTasks() {
+        // Stop frame capture
+        DispatchQueue.global(qos: .userInteractive).async { [ unowned self] in
+            frameHandler.isEnabled = false
+            frameProcessingChain.stopTasks()
+            
+            // MARK: I REALLY DON'T KNOW IF THIS IS THE BEST WAY TO GO ABOUT THIS, BUT I JUST WANT OT GET RID OF EVERYTHIGN WHEN WE NAVIGATE BACK AND NOT HAVE ANY REFERENCES
+            // Clear all data
+            DispatchQueue.main.async {
+                self.frame = nil
+                self.actionLabel = nil
+                self.confidenceString = nil
+                self.skillsObserved = []
+            }
+            
+        }
+    }
 }
 
 extension FrameViewModel: FrameHandlerDelegate {
@@ -45,6 +63,7 @@ extension FrameViewModel: FrameProcessingChainDelegate {
         // TODO: need to create and call drawposes in the user interactive queue threa
         // Render the poses on a different queue than pose publisher.
         DispatchQueue.global(qos: .userInteractive).async {
+            // MARK: found a bug here. the viewmodel was already deallocated, but for some reason the frame was not. I need to look into this
             DispatchQueue.main.async { [unowned self] in
                 self.frame = frame
                 

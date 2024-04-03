@@ -66,5 +66,9 @@ class PerformanceReporter {
         print(report)
 
     }
+    
+    func stopTasks () {
+        repeatingTimer?.invalidate()
+    }
 }
 

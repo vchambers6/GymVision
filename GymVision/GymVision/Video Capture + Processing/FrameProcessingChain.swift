@@ -87,6 +87,12 @@ class FrameProcessingChain {
     init() {
         predictionWindowSize = actionClassifier.calculatePredictionWindowSize()
     }
+    
+    /// Stop the combine publisher
+    func stopTasks() {
+        frameProcessingChain?.cancel()
+        performanceReporter?.stopTasks()
+    }
 }
 
 // MARK: - Combine Chain Builder
