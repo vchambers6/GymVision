@@ -36,6 +36,11 @@ struct AppFonts {
         static let font: Font = .custom("Poppins-ExtraBold", size: 24.0)
         static let color: Color = .black
     }
+    
+    struct SmallButtonText {
+        static let font: Font = .custom("Poppins-Bold", size: 14.0)
+        static let color: Color = .white
+    }
 }
 struct MainTheme: ThemeProtocol {
     var largeTitleFont: Font =  .custom("Poppins-ExtraBold", size: 30.0)

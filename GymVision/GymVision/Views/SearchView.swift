@@ -26,7 +26,7 @@ struct SearchView: View {
                             List(viewModel.skills) { skill in
                                 // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string
                                 NavigationLink(destination: StaticSkillDetailView()) {
-                                    SkillTableRowView(skill: skill.name)
+                                    SkillTableRowView(skill: skill.name, apparatus: skill.apparatus)
                                 }
                                 
                             }.background(Color.mnPrimaryThemeBG)
