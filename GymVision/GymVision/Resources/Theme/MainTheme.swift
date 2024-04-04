@@ -32,6 +32,11 @@ struct AppFonts {
         static let color: Color = .black
     }
     
+    struct LargeTitleBolder {
+        static let font: Font = .custom("Poppins-Bold", size: 34.0)
+        static let color: Color = .black
+    }
+    
     struct TextTitle {
         static let font: Font = .custom("Poppins-ExtraBold", size: 24.0)
         static let color: Color = .black

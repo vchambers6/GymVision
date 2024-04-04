@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FetchedSkillDetailView: View {
-    @StateObject var viewModel = SkillDetailViewModel()
+    @StateObject var viewModel = FetchedSkillDetailViewModel()
     let uuidString: String
     @State private var loadingFailed = false
     

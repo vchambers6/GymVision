@@ -1,15 +1,17 @@
 //
-//  IconView.swift
+//  CategoryCardView.swift
 //  GymVision
 //
-//  Created by Vanessa Chambers on 4/3/24.
+//  Created by Vanessa Chambers on 4/4/24.
 //
 
 import SwiftUI
 
-struct IconView: View {
-    var iconText: String
+struct CategoryCardView: View {
+    
+    var mainText: String
     var popOverText: String
+    
     @State private var showingPopover = false
     
     @Environment(\.colorScheme) var colorScheme
@@ -20,21 +22,24 @@ struct IconView: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(Color.mnBtnBG) // Adjust the color as needed
-                    .frame(width: 68, height: 45)  // Adjust the size as needed
+                    .fill(Color.white)
+                    .frame(maxWidth: .infinity).frame(height: 45)
+                    // MARK: this should change -- for dark mode
                     .background(
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(colorScheme == .dark ? Color.mnIconText : Color.clear, lineWidth: 1.5)
                     )
                 
-                Text(iconText)
+                Text("Category: \(mainText)")
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
                     .font(AppFonts.MediumButtonText.font)
-                    .foregroundColor(Color.mnIconText)
+                    .foregroundColor(Color.mnAccent)
             }.aspectRatio(1.0, contentMode: .fit)
         }.popover(isPresented: $showingPopover, content: {
             ZStack {
-                Color.mnBtnBG.ignoresSafeArea(.all)
-                Text(popOverText).font(AppFonts.PlainTextSemiBold.font).foregroundStyle(.white)
+                Color.white.ignoresSafeArea(.all)
+                Text(popOverText).font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.mnAccent)
                     .padding()
             }
             
@@ -43,5 +48,5 @@ struct IconView: View {
 }
 
 #Preview {
-    IconView(iconText: "WAG", popOverText: "This skill is under the code of points for WAG")
+    CategoryCardView(mainText: "Acrobatic Flight", popOverText: #"""Group 5 - acrobatic flight"""#)
 }
