@@ -24,7 +24,7 @@ struct OverviewView: View {
                     
                     List(skillsObserved) { skill in
                         // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string
-                        NavigationLink(destination: SkillDetailView(uuidString: skill.uuidString)) {
+                        NavigationLink(destination: FetchedSkillDetailView(uuidString: skill.uuidString)) {
                             SkillTableRowView(skill: skill.label, confidence: skill.confidenceString!)
                         }
                         

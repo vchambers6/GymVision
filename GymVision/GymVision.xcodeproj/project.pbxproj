@@ -62,6 +62,7 @@
 		676F44912B7D9AE80059328B /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44902B7D9AE80059328B /* Pose+Connection.swift */; };
 		676F44932B7D9B000059328B /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44922B7D9B000059328B /* Pose+Empty.swift */; };
 		676F44962B7DB13B0059328B /* PerformanceReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44952B7DB13B0059328B /* PerformanceReporter.swift */; };
+		677E75692BBD2CF500FE3171 /* FetchedSkillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */; };
 		679D3CBA2BBB738600793D26 /* SkillUUIDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679D3CB92BBB738600793D26 /* SkillUUIDStore.swift */; };
 		67A978FC2B8719DE00B605AB /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */; };
 		67A978FE2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */; };
@@ -73,6 +74,7 @@
 		67B4F4FB2BBCEC9400B83851 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B4F4FA2BBCEC9400B83851 /* SearchViewModel.swift */; };
 		67B4F4FD2BBCF10200B83851 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B4F4FC2BBCF10200B83851 /* SearchView.swift */; };
 		67B4F4FF2BBD02F100B83851 /* ApparatusIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B4F4FE2BBD02F100B83851 /* ApparatusIconView.swift */; };
+		67C7798C2BBE030900D8666E /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7798B2BBE030900D8666E /* IconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,7 @@
 		676F44902B7D9AE80059328B /* Pose+Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
 		676F44922B7D9B000059328B /* Pose+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
 		676F44952B7DB13B0059328B /* PerformanceReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceReporter.swift; sourceTree = "<group>"; };
+		677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedSkillDetailView.swift; sourceTree = "<group>"; };
 		679D3CB92BBB738600793D26 /* SkillUUIDStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillUUIDStore.swift; sourceTree = "<group>"; };
 		67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 		67B4F4FA2BBCEC9400B83851 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		67B4F4FC2BBCF10200B83851 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		67B4F4FE2BBD02F100B83851 /* ApparatusIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApparatusIconView.swift; sourceTree = "<group>"; };
+		67C7798B2BBE030900D8666E /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +377,8 @@
 				67B4F4F82BBCEB5200B83851 /* SearchBarView.swift */,
 				67B4F4FC2BBCF10200B83851 /* SearchView.swift */,
 				67B4F4FE2BBD02F100B83851 /* ApparatusIconView.swift */,
+				677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */,
+				67C7798B2BBE030900D8666E /* IconView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67661C9F2B83F27F0049DBEF /* SkillClassifier+FrameRate.swift in Sources */,
+				67C7798C2BBE030900D8666E /* IconView.swift in Sources */,
 				679D3CBA2BBB738600793D26 /* SkillUUIDStore.swift in Sources */,
 				67A979022B87F98C00B605AB /* ActionClassifierCardView.swift in Sources */,
 				673FCD932BB64E7A00DC7B1C /* MainTheme.swift in Sources */,
@@ -558,6 +565,7 @@
 				6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */,
 				670817F52BB6009B0066DC22 /* GifImage.swift in Sources */,
 				67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */,
+				677E75692BBD2CF500FE3171 /* FetchedSkillDetailView.swift in Sources */,
 				67B4F4FD2BBCF10200B83851 /* SearchView.swift in Sources */,
 				67661C952B83F1EB0049DBEF /* SkillClassifier+Singleton.swift in Sources */,
 				676F448A2B7D84C30059328B /* FrameHandler.swift in Sources */,

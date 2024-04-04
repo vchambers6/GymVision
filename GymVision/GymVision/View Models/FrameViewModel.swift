@@ -30,6 +30,8 @@ class FrameViewModel: NSObject, ObservableObject {
         frameProcessingChain.delegate = self
     }
     
+    /// The purpose of this is to disable frame capturing, cancel the Combine  publisher, and stop the PerformanceReporter timer
+    /// so that FrameViewModel can actually be de-allocated from memory when we navigate back to HomeView. 
     func stopTasks() {
         // Stop frame capture
         DispatchQueue.global(qos: .userInteractive).async { [ unowned self] in

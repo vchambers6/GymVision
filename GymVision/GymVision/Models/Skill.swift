@@ -28,6 +28,20 @@ struct Skill: Identifiable, Codable {
 
 enum Discipline: String, Codable {
     case wag, mag
+    
+    var disciplineAbbreviationString: String {
+        switch self {
+        case .wag: return "WAG"
+        case .mag: return "MAG"
+        }
+    }
+    
+    var fullNameString: String {
+        switch self {
+        case .wag: return "Women's Artistic Gymnastics"
+        case .mag: return "Men's Artistics Gymnastics"
+        }
+    }
 }
 
 enum Apparatus: String, Codable {

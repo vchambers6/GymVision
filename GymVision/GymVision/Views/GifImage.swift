@@ -12,9 +12,11 @@ import WebKit
 
 struct GifImage: UIViewRepresentable {
     private let name: String
+    private let cornerRadius: CGFloat
     
-    init(_ name: String) {
+    init(_ name: String, cornerRadius: CGFloat = 0) {
         self.name = name
+        self.cornerRadius = cornerRadius
     }
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
@@ -23,6 +25,9 @@ struct GifImage: UIViewRepresentable {
         let data = try! Data(contentsOf: url)
         
         webView.load(data, mimeType: "image/gif", characterEncodingName: "UTF-8", baseURL: url.deletingLastPathComponent())
+        
+        webView.layer.cornerRadius = cornerRadius
+        webView.layer.masksToBounds = true
         
         return webView
     }

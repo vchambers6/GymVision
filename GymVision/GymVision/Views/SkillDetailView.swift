@@ -8,113 +8,112 @@
 import SwiftUI
 
 struct SkillDetailView: View {
-    @StateObject var viewModel = SkillDetailViewModel()
-    let uuidString: String
-    @State private var loadingFailed = false
+    var skill: Skill
+    var gifName: String = "back_handspring_so_3"
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-//    var skillCOPNumber: Double
+    //    var skillCOPNumber: Double
     var body: some View {
-        // MARK: This uses the old skill struct. I want to use new one
-        //        if let skill = skillsDictionary[skillCOPNumber] {
-        //                // ScrollView {
-        //                VStack {
-        //                    ZStack {
-        //                        // TODO: I need to figure out how to make this fullscreen
-        //                        GifImage(skill.gifName!).edgesIgnoringSafeArea(.all)//.frame(width: geometry.size.width, height: geometry.size.height)
-        //                        //                            .resizable()
-        //                        //                            .aspectRatio(contentMode: .fill)
-        //                        //                            .edgesIgnoringSafeArea(.all)
-        //
-        //                        // TODO: The spacing for all of this stuff is way off. need to change that.
-        //                        VStack() {
-        //                            Text(skill.name)
-        //                                .font(.largeTitle)
-        //                                .fontWeight(.bold)
-        //                                .foregroundColor(.white)
-        //                                .multilineTextAlignment(.center).frame(alignment: .top)
-        //                                .padding(.top, 10)
-        //                            Spacer()
-        //                            HStack {
-        //                                RoundedRectangle(cornerRadius: 15)
-        //                                    .frame(width: 100, height: 50)
-        //                                    .foregroundColor(.blue)
-        //                                    .overlay(
-        //                                        Text(skill.apparatus.rawValue)
-        //                                            .foregroundColor(.white)
-        //                                    )
-        //                                    .padding(.bottom, 50)
-        //                                    .padding(.leading, 20)
-        //                                Spacer()
-        //                                RoundedRectangle(cornerRadius: 15)
-        //                                    .frame(width: 100, height: 50)
-        //                                    .foregroundColor(.green)
-        //                                    .overlay(
-        //                                        Text(skill.difficultyValue!)
-        //                                            .font(.title)
-        //                                            .foregroundColor(.white)
-        //                                    )
-        //                                    .padding(.bottom, 50) // Adjust bottom padding as needed
-        //                                    .padding(.trailing, 20)
-        //
-        //                            }
-        //                        }
-        //
-        //
-        //                    }
-        //                    //                    Image(systemName: "arrow.down.circle.fill")
-        //                    //                        .resizable()
-        //                    //                        .frame(width: 30, height: 30)
-        //                    //                        .foregroundColor(.gray)
-        //                    //                        .padding(.bottom, 20)
-        //                }
-        //                //}
-        //        }
-        //        else {
-        //            Text(String(skillCOPNumber))
-        //        }
-        VStack {
-            if let skill = viewModel.skill {
-                Text("Skill name \(skill.name)")
-                Text("Skill description \(skill.description)")
-            } else if loadingFailed {
-                Text("🥲 GymVision failed to load skill details")
-            } else {
-                ProgressView {
-                    Text("🤸🏾‍♂️Loading Skill Details...").onAppear {
-                        /// If video feature doesn't load after 10 seconds, show the timeout view.
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
-                            if self.viewModel.skill == nil {
-                                self.loadingFailed = true
-                            }
+        NavigationView {
+            ZStack {
+                Color.mnPrimaryThemeBG.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                ScrollView(.vertical) {
+                    
+                    ZStack {
+                        Color.white.blur(radius: 10)
+                        VStack {
+                            Text(skill.name)
+                                .font(AppFonts.LargeTitleBold.font)
+                                .foregroundColor(AppFonts.LargeTitleBold.color)
+                                .multilineTextAlignment(.center)
+                            GifImage(gifName, cornerRadius: 20)
+                            Text("Scroll to see more")
+                                .font(AppFonts.PlainText.font)
+                                .foregroundColor(.gray)
+                                .padding(.top, 20)
+                            Image(systemName: "arrow.down")
+                                .font(.system(size: 18))
+                                .foregroundColor(.gray)
+                        }.padding(30)
+                    }.frame(idealHeight: UIScreen.main.bounds.height - 100)
+                    
+                    HStack {
+                        
+                        let disciplineText = "This skill is under the code of points for \(skill.discipline.fullNameString)."
+                        let apparatusText = "This skill is performed on the \(skill.apparatus.apparatusString.lowercased()) apparatus. \(skill.discipline.fullNameString) contains four apparatus: vault, uneven bars, balance beam, and floor exercise."
+                        
+                        IconView(iconText: skill.discipline.disciplineAbbreviationString, popOverText: disciplineText)
+                        Spacer()
+                        IconView(iconText: skill.apparatus.apparatusAbbreviationString, popOverText: apparatusText)
+                        if let dValue = skill.difficultyValue {
+                            let dValueText = "This skill has a difficulty value of '\(dValue.rawValue).' Skills on the uneven bars, balance beam, and floor exercise can have difficulty values ranging from A (least difficult) to J (most difficult)."
+                            Spacer()
+                            IconView(iconText: dValue.rawValue, popOverText: dValueText)
+                        } else if let dValue = skill.vaultDifficultyValue {
+                            let dValueText = "This skill has a difficulty value of \(String(dValue)). Skills on vault can have difficulty values ranging from 2.0 (least difficult) to 6.4 (most difficult)."
+                            Spacer()
+                            IconView(iconText: String(dValue), popOverText: dValueText)
                         }
+                        
+                    }.padding(.top, 15).padding(30)
+                        .scrollTransition(.animated.threshold(.visible(0.9))) { content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0)
+                                    .scaleEffect(phase.isIdentity ? 1 : 0.75)
+                                    .blur(radius: phase.isIdentity ? 0 : 10)
+                            }
+                    VStack {
+//                        GeometryReader { geometry in
+                            Text("**Official Description:** \(skill.description)")
+                                .font(AppFonts.PlainText.font)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 30)
+                                .padding(.bottom, 20)
+                                .scrollTransition(.animated.threshold(.visible(0.9))) { content, phase in
+                                    content
+                                        .opacity(phase.isIdentity ? 1 : 0)
+                                        .scaleEffect(phase.isIdentity ? 1 : 0.75)
+                                        .blur(radius: phase.isIdentity ? 0 : 10)
+                                }
+                            
+                            if let namedAfter = skill.namedAfter {
+                                Text("This skill is named after **\(namedAfter)** in the 2022-2024 Code of Points.")
+                                    .font(AppFonts.PlainText.font)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                                    .padding(.horizontal, 30)
+                                    .padding(.bottom, 30)
+                                    .scrollTransition(.animated.threshold(.visible(0.9))) { content, phase in
+                                        content
+                                            .opacity(phase.isIdentity ? 1 : 0)
+                                            .scaleEffect(phase.isIdentity ? 1 : 0.75)
+                                            .blur(radius: phase.isIdentity ? 0 : 10)
+                                    }
+                            }
+//                        }
                     }
                 }
             }
-        }.onAppear {
-            Task {
-                do {
-                    try await viewModel.fetchSkill(at: uuidString)
-                } catch {
-                    print("❌ Error: \(error)")
+        }.toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                BackButton() {
+                    self.presentationMode.wrappedValue.dismiss()
                 }
-                
             }
-        }
+        }.navigationBarBackButtonHidden()
+
     }
-        
 }
+
+
 
 #Preview {
-    SkillDetailView(uuidString: "212F18A9-127F-43D4-984E-8FA174C0C240")
-}
-
-
-struct StaticSkillDetailView: View {
+    @State var skill = Skill(name: "Back Handspring Stepout", discipline: .wag, apparatus: .BB, difficultyValue: .B, description: "Flic-flac with step-out, also with support on one arm", copNumber: 5.204, groupNumber: 5, namedAfter: "Vanessa Chambers")
     
-    var body: some View  {
-        Text("hello world")
-    }
+    return SkillDetailView(skill: skill)
 }
+
+
 //
 //let skillsDictionary: [Double: Skill] = [
 //    35.204 : Skill(copNumber: 35.204, name: "Back Handspring Stepout", description: #"""Flic-flac with step-out, also with support on one arm"""#, apparatus: .BB, difficultyValue: "B", gifName: "back_handspring_so_3")
