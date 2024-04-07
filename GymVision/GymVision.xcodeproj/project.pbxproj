@@ -63,6 +63,7 @@
 		676F44932B7D9B000059328B /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44922B7D9B000059328B /* Pose+Empty.swift */; };
 		676F44962B7DB13B0059328B /* PerformanceReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F44952B7DB13B0059328B /* PerformanceReporter.swift */; };
 		677E75692BBD2CF500FE3171 /* FetchedSkillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */; };
+		6794ACD62BC31C1200E2ECD8 /* SkillTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */; };
 		679D3CBA2BBB738600793D26 /* SkillUUIDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679D3CB92BBB738600793D26 /* SkillUUIDStore.swift */; };
 		67A978FC2B8719DE00B605AB /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */; };
 		67A978FE2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */; };
@@ -158,6 +159,7 @@
 		676F44922B7D9B000059328B /* Pose+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
 		676F44952B7DB13B0059328B /* PerformanceReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceReporter.swift; sourceTree = "<group>"; };
 		677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedSkillDetailView.swift; sourceTree = "<group>"; };
+		6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTableRowView.swift; sourceTree = "<group>"; };
 		679D3CB92BBB738600793D26 /* SkillUUIDStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillUUIDStore.swift; sourceTree = "<group>"; };
 		67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */,
 				67C7798B2BBE030900D8666E /* IconView.swift */,
 				67C779932BBF159800D8666E /* CategoryCardView.swift */,
+				6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				677E75692BBD2CF500FE3171 /* FetchedSkillDetailView.swift in Sources */,
 				67B4F4FD2BBCF10200B83851 /* SearchView.swift in Sources */,
 				67661C952B83F1EB0049DBEF /* SkillClassifier+Singleton.swift in Sources */,
+				6794ACD62BC31C1200E2ECD8 /* SkillTableRowView.swift in Sources */,
 				676F448A2B7D84C30059328B /* FrameHandler.swift in Sources */,
 				67A978FC2B8719DE00B605AB /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				67C7798E2BBE6C8900D8666E /* FetchedSkillDetailViewModel.swift in Sources */,

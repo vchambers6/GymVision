@@ -19,20 +19,15 @@ struct OverviewView: View {
 
     var body: some View {
         NavigationView {
-                
             VStack {
-                    
                     List(skillsObserved) { skill in
-                        // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string
+                        // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string -- i think i did this
                         NavigationLink(destination: FetchedSkillDetailView(uuidString: skill.uuidString)) {
                             SkillTableRowView(skill: skill.label, confidence: skill.confidenceString!)
-                        }
-                        
-                    }.background(Color.mnPrimaryThemeBG)
+                        }     
+                    }.background(Color.primaryBG)
                     .scrollContentBackground(.hidden)
-
             }
-                
         }.frame(alignment: .center)
         .onAppear(perform: {
             isCameraActive = false
@@ -40,7 +35,7 @@ struct OverviewView: View {
             isCameraActive = true
         }).navigationBarTitleDisplayMode(.inline).toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Skills Observed").font(AppFonts.PlainTextSemiBold.font)
+                Text("Skills Observed").font(AppFonts.PlainTextSemiBold.font).foregroundStyle(.primaryBodyText)
             }
             ToolbarItem(placement: .topBarLeading) {
                 BackButton {
@@ -52,28 +47,7 @@ struct OverviewView: View {
     }
 }
 
-struct SkillTableRowView: View {
-    var skill: String
-    var apparatus: Apparatus?
-    var confidence: String?
-    
-    var body: some View {
-        HStack {
-            HStack {
-                if let apparatus = apparatus {
-                    ApparatusIconView(apparatus: apparatus)
-                }
-                Text(skill).padding(.leading, 5).font(AppFonts.PlainText.font)
-            }
-            
-            if let confidence = confidence {
-                Spacer()
-                Text("Confidence: \(confidence)").padding(.trailing, 5).minimumScaleFactor(0.5).lineLimit(1).font(AppFonts.PlainText.font)
-            }
-            
-        }
-    }
-}
+
 
 //#Preview {
 //    var skills = [

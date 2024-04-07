@@ -11,10 +11,10 @@ class SearchViewModel: ObservableObject {
     
     @Published var skills: [Skill] = []
     
-    var queryString: String = ""
+    @Published var queryString: String = ""
     
     
-     func getSkills(containing queryString: String) async throws {
+     func getSkills() async throws {
         
         let encodedQueryString = queryString.replacingOccurrences(of: " ", with: "%20")
         let urlString = Constants.baseURL + Endpoints.skills + Endpoints.search + encodedQueryString

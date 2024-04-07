@@ -13,11 +13,11 @@ struct ActionClassifierCardView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25).fill(.mnPrimaryThemeBG.opacity(0.85))
+            RoundedRectangle(cornerRadius: 25).fill(Color.actionClassifierCardBG.opacity(0.85))
             VStack {
-                Text(skillLabel).font(AppFonts.LargeTitleBold.font).foregroundStyle(AppFonts.LargeTitleBold.color).minimumScaleFactor(0.5).lineLimit(1)
+                Text(skillLabel).font(AppFonts.LargeTitleBold.font).foregroundStyle(.black).minimumScaleFactor(0.5).lineLimit(1)
                 if let confidenceString = confidence {
-                    Text("Confidence: \(confidenceString)").font(AppFonts.TextTitleSecondary.font).foregroundStyle(AppFonts.TextTitleSecondary.color)
+                    Text("Confidence: \(confidenceString)").font(AppFonts.TextTitleSecondary.font).foregroundStyle(.secondary)
                 }
                 
             }.padding(4)

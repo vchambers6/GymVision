@@ -15,16 +15,12 @@ struct HomeView: View {
     
         ZStack {
             /// BG Color
-            Color.mnPrimaryThemeBG.ignoresSafeArea(.all)
-            
-            
-            /// Information button
-           
+            Color.primaryBG.ignoresSafeArea(.all)
             
             VStack {
                 Spacer()
                 VStack {
-                    Text("GymVision uses computer vision technology to tell you what gymnastis skill you are looking at. \n \n \nTap the button below, and aim your device camera at a gymnastics routine to begin!").multilineTextAlignment(.leading).font(AppFonts.PlainText.font).padding(30)
+                    Text("GymVision uses computer vision technology to tell you what gymnastis skill you are looking at. \n \n \nTap the button below, and aim your device camera at a gymnastics routine to begin!").multilineTextAlignment(.leading).font(AppFonts.PlainText.font).padding(30).foregroundStyle(Color.primaryBodyText)
                 }
                 
                 Spacer()
@@ -32,27 +28,27 @@ struct HomeView: View {
                     FrameView()
                 } label: {
                     ZStack {
-                        Circle().stroke(colorScheme == .dark ? Color.mnAccent : Color.clear)
-                            .fill(.mnBtnBG)
+                        Circle().stroke(Color.primaryBorder, lineWidth: 1.5) // Border color
+                            .fill(Color.primaryIcon)
                             .frame(width: 100, height: 100)
 
                         Image(systemName: "camera.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.mnIconText) // Adjust color as needed
-                            .frame(width: 50, height: 50) // Adjust size as needed
+                            .foregroundColor(Color.secondaryIcon)
+                            .frame(width: 50, height: 50)
                     }
                 }.padding(30)
             }.navigationBarTitleDisplayMode(.inline).toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Text("GymVision").font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.mnAccent)
+                    Text("GymVision").font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.primaryAccent)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(destination: SearchView()) {
                         Image(systemName: "magnifyingglass")
                             .resizable()
                             .frame(width: 20, height: 20)
-                            .foregroundStyle(Color.mnAccent)
+                            .foregroundStyle(Color.primaryAccent)
                     }
                 }
             }.navigationBarBackButtonHidden()

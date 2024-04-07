@@ -22,15 +22,17 @@ struct SkillDetailView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.mnPrimaryThemeBG.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                // Background color
+                Color.primaryBG.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 ScrollView(.vertical) {
                     
                     ZStack {
-                        Color.white.blur(radius: 18)
+                        // Blurred background
+                        Color.secondaryBG.blur(radius: 18)
                         VStack {
                             Text(skill.name)
                                 .font(AppFonts.LargeTitleBolder.font)
-                                .foregroundColor(AppFonts.LargeTitleBold.color)
+                                .foregroundColor(Color.primaryTitleText)
                                 .multilineTextAlignment(.center)
                             GifImage(gifName, cornerRadius: 20)
                             Text("Scroll to see more")
@@ -66,35 +68,33 @@ struct SkillDetailView: View {
                                     .blur(radius: phase.isIdentity ? 0 : 10)
                             }
                     VStack {
-//                        GeometryReader { geometry in
-                            Text("**Official Description:** \(skill.description)")
+                        Text("**Official Description:** \(skill.description)")
+                            .font(AppFonts.PlainText.font)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 30)
+                            .padding(.bottom, 20)
+                            .scrollTransition(.animated.threshold(.visible(0.9))) { content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0)
+                                    .scaleEffect(phase.isIdentity ? 1 : 0.75)
+                                    .blur(radius: phase.isIdentity ? 0 : 10)
+                            }
+                        
+                        if let namedAfter = skill.namedAfter {
+                            Text("This skill is named after **\(namedAfter)** in the 2022-2024 Code of Points.")
                                 .font(AppFonts.PlainText.font)
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                        
                                 .padding(.horizontal, 30)
-                                .padding(.bottom, 20)
+                                .padding(.bottom, 30)
                                 .scrollTransition(.animated.threshold(.visible(0.9))) { content, phase in
                                     content
                                         .opacity(phase.isIdentity ? 1 : 0)
                                         .scaleEffect(phase.isIdentity ? 1 : 0.75)
                                         .blur(radius: phase.isIdentity ? 0 : 10)
                                 }
-                            
-                            if let namedAfter = skill.namedAfter {
-                                Text("This skill is named after **\(namedAfter)** in the 2022-2024 Code of Points.")
-                                    .font(AppFonts.PlainText.font)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                                    .padding(.horizontal, 30)
-                                    .padding(.bottom, 30)
-                                    .scrollTransition(.animated.threshold(.visible(0.9))) { content, phase in
-                                        content
-                                            .opacity(phase.isIdentity ? 1 : 0)
-                                            .scaleEffect(phase.isIdentity ? 1 : 0.75)
-                                            .blur(radius: phase.isIdentity ? 0 : 10)
-                                    }
-                            }
-//                        }
-                    }
+                        }
+                    }.foregroundStyle(.primaryBodyText)
                 }
             }
         }.toolbar {

@@ -22,40 +22,20 @@ struct FrameView: View {
                 /// Uncomment this for preview purposes
                 //        if true {
                 NavigationView {
-                    GeometryReader { geo in
-                        VStack {
-                            ZStack(alignment: .center) {
-                                /// Full screen image
-                                Image(image, scale: 3.0, orientation: .up, label: Text("Gymnast Performing \(viewModel.actionLabel ?? "" ) Skill"))
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                //                                .frame(width: geo.size.width, height: geo.size.height)
-                                    .frame(maxHeight: .infinity).ignoresSafeArea()
-                                
-                                /// Uncomment this for preview purposes
-                                //                        Image("simone")
-                                //                            .resizable()
-                                //                            .aspectRatio(contentMode: .fill)
-                                //                            .frame(width: geo.size.width, height: geo.size.height)
-                                
-                                /// Custom back button; returns to home view on tap
-                                //                            BackButton(buttonTitle: "Home") {
-                                //                                presentationMode.wrappedValue.dismiss()
-                                //                            }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topLeading).padding()
-                                //
-                                //                            /// Overview overlay button
-                                //                            NavigationLink(destination: OverviewView(isCameraActive: $isCameraActive, skillsObserved: viewModel.skillsObserved)) {
-                                //                                OverviewButton()
-                                //                                    .padding()
-                                //                            }.frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .topTrailing)
-                                
-                                /// Action classifier card
-                                ActionClassifierCardView(skillLabel: viewModel.actionLabel ?? "No Skill Observed", confidence: viewModel.confidenceString).frame(maxWidth: geo.size.width, maxHeight: geo.size.height, alignment: .bottom).padding()
-                            }
+                    VStack {
+                        ZStack(alignment: .center) {
+                            /// Full screen image
+                            Image(image, scale: 3.0, orientation: .up, label: Text("Gymnast Performing \(viewModel.actionLabel ?? "" ) Skill"))
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(maxHeight: .infinity).ignoresSafeArea()
+                            /// Action classifier card
+                            ActionClassifierCardView(skillLabel: viewModel.actionLabel ?? "No Skill Observed", confidence: viewModel.confidenceString).frame(maxHeight: .infinity, alignment: .bottom).padding()
                         }
-                        
-                        .background(.black)
                     }
+                    
+                    .background(.black)
+                
                 }.background(.black)
                     .navigationBarTitleDisplayMode(.inline).toolbar {
                         ToolbarItem(placement: .topBarLeading) {
@@ -78,16 +58,22 @@ struct FrameView: View {
                     }
             } else {
                 NavigationView {
-                    if showTimeoutView {
-                        Text("AI feature failed to load.")
-                    } else {
-                        ProgressView {
-                            Text("Loading AI feature...").onAppear {
-                                /// If video feature doesn't load after 10 seconds, show the timeout view.
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                                    if self.viewModel.frame == nil {
-                                        self.showTimeoutView = true
-                                    }
+                    ZStack {
+                        Color.primaryBG.ignoresSafeArea()
+                        if showTimeoutView {
+                            Text("AI feature failed to load.")
+                                .foregroundStyle(Color.primaryBodyText)
+                        } else {
+                            ProgressView {
+                                Text("Loading AI feature...")
+                                    .foregroundStyle(Color.primaryBodyText)
+                                    .onAppear {
+                                        /// If video feature doesn't load after 10 seconds, show the timeout view.
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                                            if self.viewModel.frame == nil {
+                                                self.showTimeoutView = true
+                                            }
+                                        }
                                 }
                             }
                         }
@@ -107,7 +93,8 @@ struct FrameView: View {
 struct OverviewButton: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25).fill(Color.mnBtnBG.opacity(0.5))
+            // TODO: I need this rectangle to SHOW UP!!! it's nto showing up
+            RoundedRectangle(cornerRadius: 25).fill(Color.primaryIcon.opacity(0.5))
             Label(
                 title: {
                     Text("Overview")

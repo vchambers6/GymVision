@@ -20,21 +20,21 @@ struct IconView: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(Color.mnBtnBG) // Adjust the color as needed
+                    .fill(Color.primaryIcon) // Adjust the color as needed
                     .frame(width: 68, height: 45)  // Adjust the size as needed
                     .background(
                         RoundedRectangle(cornerRadius: 6)
-                            .stroke(colorScheme == .dark ? Color.mnIconText : Color.clear, lineWidth: 1.5)
+                            .stroke(Color.primaryBorder, lineWidth: 1.5)
                     )
                 
                 Text(iconText)
                     .font(AppFonts.MediumButtonText.font)
-                    .foregroundColor(Color.mnIconText)
+                    .foregroundColor(Color.secondaryIcon)
             }.aspectRatio(1.0, contentMode: .fit)
         }.popover(isPresented: $showingPopover, content: {
             ZStack {
-                Color.mnBtnBG.ignoresSafeArea(.all)
-                Text(popOverText).font(AppFonts.PlainTextSemiBold.font).foregroundStyle(.white)
+                Color.primaryIcon.ignoresSafeArea(.all)
+                Text(popOverText).font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.secondaryIcon)
                     .padding()
             }
             

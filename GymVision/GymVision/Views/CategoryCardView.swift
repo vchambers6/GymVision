@@ -22,24 +22,24 @@ struct CategoryCardView: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(Color.white)
+                    .fill(Color.secondaryIcon)
                     .frame(maxWidth: .infinity).frame(height: 45)
                     // MARK: this should change -- for dark mode
                     .background(
                         RoundedRectangle(cornerRadius: 6)
-                            .stroke(colorScheme == .dark ? Color.mnIconText : Color.clear, lineWidth: 1.5)
+                            .stroke(Color.primaryBorder, lineWidth: 1.5)
                     )
                 
                 Text("Category: \(mainText)")
                     .minimumScaleFactor(0.5)
                     .lineLimit(1)
                     .font(AppFonts.MediumButtonText.font)
-                    .foregroundColor(Color.mnAccent)
+                    .foregroundColor(Color.primaryIcon)
             }.aspectRatio(1.0, contentMode: .fit)
         }.popover(isPresented: $showingPopover, content: {
             ZStack {
-                Color.white.ignoresSafeArea(.all)
-                Text(popOverText).font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.mnAccent)
+                Color.secondaryBG.ignoresSafeArea(.all)
+                Text(popOverText).font(AppFonts.PlainTextSemiBold.font).foregroundStyle(Color.primaryAccent)
                     .padding()
             }
             

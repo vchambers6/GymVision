@@ -15,16 +15,16 @@ struct ApparatusIconView: View {
         var body: some View {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(Color.mnBtnBG) // Adjust the color as needed
+                    .fill(Color.primaryIcon) // Adjust the color as needed
                     .frame(width: calculateSize(), height: calculateSize())  // Adjust the size as needed
                     .background(
                         RoundedRectangle(cornerRadius: 6)
-                            .stroke(colorScheme == .dark ? Color.mnIconText : Color.clear, lineWidth: 1.5)
+                            .stroke(Color.primaryBorder, lineWidth: 1.5) // Border Color
                     )
                 
                 Text(apparatus.rawValue)
                     .font(AppFonts.SmallButtonText.font) // Adjust the font as needed
-                    .foregroundColor(Color.mnIconText)
+                    .foregroundColor(Color.secondaryIcon)
             }.aspectRatio(1.0, contentMode: .fit)
         }
     
