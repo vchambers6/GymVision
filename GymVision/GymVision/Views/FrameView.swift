@@ -61,12 +61,12 @@ struct FrameView: View {
                     ZStack {
                         Color.primaryBG.ignoresSafeArea()
                         if showTimeoutView {
-                            Text("AI feature failed to load.")
+                            Text("AI feature failed to load.").font(AppFonts.PlainText.font)
                                 .foregroundStyle(Color.primaryBodyText)
                         } else {
                             ProgressView {
                                 Text("Loading AI feature...")
-                                    .foregroundStyle(Color.primaryBodyText)
+                                    .foregroundStyle(Color.primaryBodyText).font(AppFonts.PlainText.font)
                                     .onAppear {
                                         /// If video feature doesn't load after 10 seconds, show the timeout view.
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {

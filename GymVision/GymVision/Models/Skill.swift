@@ -18,28 +18,35 @@ struct Skill: Identifiable, Codable {
     var copNumber: Double?
     var vaultCopNumber: Double?
     var groupNumber: Int
-    var namedAfter: String?
-    
+    var namedAfterWAG: [Gymnast]?
+    var namedAfterMAG: [Gymnast]?
+    var yearNamed: Int?
     
     /// These two columns are here for internal purposes
     var createdAt: Date?
     var updatedAt: Date?
 }
 
+struct Gymnast: Codable {
+    var lastName: String?
+    var firstName: String?
+    var federation: String?
+}
+
 enum Discipline: String, Codable {
-    case wag, mag
+    case WAG, MAG
     
     var disciplineAbbreviationString: String {
         switch self {
-        case .wag: return "WAG"
-        case .mag: return "MAG"
+        case .WAG: return "WAG"
+        case .MAG: return "MAG"
         }
     }
     
     var fullNameString: String {
         switch self {
-        case .wag: return "Women's Artistic Gymnastics"
-        case .mag: return "Men's Artistics Gymnastics"
+        case .WAG: return "Women's Artistic Gymnastics"
+        case .MAG: return "Men's Artistics Gymnastics"
         }
     }
 }

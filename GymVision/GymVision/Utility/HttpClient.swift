@@ -31,6 +31,13 @@ class HttpClient {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         
+        do {
+            let object = try decoder.decode([T].self, from:  data)
+            return object
+            // Handle decoded skill object
+        } catch {
+            print("Error decoding JSON data:", error)
+        }
         guard let object = try? decoder.decode([T].self, from:  data) else {
             throw HttpError.errorDecodingData
         }

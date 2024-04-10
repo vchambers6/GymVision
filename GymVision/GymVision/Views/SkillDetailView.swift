@@ -80,8 +80,8 @@ struct SkillDetailView: View {
                                     .blur(radius: phase.isIdentity ? 0 : 10)
                             }
                         
-                        if let namedAfter = skill.namedAfter {
-                            Text("This skill is named after **\(namedAfter)** in the 2022-2024 Code of Points.")
+                        if let namedAfterString = viewModel.namedAfterString  {
+                            Text(namedAfterString)
                                 .font(AppFonts.PlainText.font)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         
@@ -111,7 +111,7 @@ struct SkillDetailView: View {
 
 
 #Preview {
-    @State var skill = Skill(name: "Back Handspring Stepout", discipline: .wag, apparatus: .BB, difficultyValue: .B, description: "Flic-flac with step-out, also with support on one arm", copNumber: 5.204, groupNumber: 5, namedAfter: "Vanessa Chambers")
+    @State var skill = Skill(name: "Back Handspring Stepout", discipline: .WAG, apparatus: .BB, difficultyValue: .B, description: "Flic-flac with step-out, also with support on one arm", copNumber: 5.204, groupNumber: 5, namedAfterWAG: [Gymnast(lastName: "Chambers", firstName: "Vanessa", federation: "USA")])
     
     return SkillDetailView(skill: skill)
 }

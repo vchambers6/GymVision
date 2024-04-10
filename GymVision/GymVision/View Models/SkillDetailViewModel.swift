@@ -16,6 +16,7 @@ class SkillDetailViewModel: ObservableObject {
     @Published var dValueText: String
     @Published var categoryLabel: String = "No Category"
     @Published var categoryDescription: String = "No description at this time."
+    @Published var namedAfterString: String?
     
     
     
@@ -38,6 +39,54 @@ class SkillDetailViewModel: ObservableObject {
             self.categoryLabel = category.shortString
             self.categoryDescription = category.longString
         }
+        
+        var namesArray = [String]()
+        if let namedAfterWAG = skill.namedAfterWAG {
+            for gymnast in namedAfterWAG {
+                namesArray.append(getNiceName(for: gymnast, wag: true))
+            }
+        }
+
+        if let namedAfterMAG = skill.namedAfterMAG {
+            for gymnast in namedAfterMAG {
+                namesArray.append(getNiceName(for: gymnast, wag: false))
+            }
+        }
+        
+        /// Formulating the named after string. 
+        if !namesArray.isEmpty {
+            var prefix = "This skill is named after "
+            var suffix = ""
+            let count = namesArray.count
+                
+            if count > 2 {
+                prefix = prefix + namesArray.dropLast(1).joined(separator: ", ")
+                suffix = ", and " + namesArray.suffix(1)[0]
+            } else {
+                prefix = prefix + namesArray.joined(separator: " and ")
+            }
+            
+            if let yearNamed = skill.yearNamed {
+                self.namedAfterString = prefix + suffix + ". It was added to the code of points in " + String(yearNamed) + "."
+            } else {
+                self.namedAfterString = prefix + suffix + "."
+            }
+        }
+    }
+    
+    func getNiceName(for gymnast: Gymnast, wag: Bool) -> String {
+        var str = wag ? "" : "MAG gymnast "
+        if let firstName = gymnast.firstName {
+            str = str + firstName
+        }
+        if let lastName = gymnast.lastName {
+            str = str + " " + lastName
+        }
+        if let federation = gymnast.federation {
+            str = str + " of " + federation
+        }
+        
+        return str
     }
     
     
