@@ -34,6 +34,7 @@ struct SkillDetailView: View {
                                 .font(AppFonts.LargeTitleBolder.font)
                                 .foregroundColor(Color.primaryTitleText)
                                 .multilineTextAlignment(.center)
+                            
                             GifImage(gifName, cornerRadius: 20)
                             Text("Scroll to see more")
                                 .font(AppFonts.PlainText.font)

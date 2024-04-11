@@ -15,8 +15,7 @@ class SearchViewModel: ObservableObject {
     
     
      func getSkills() async throws {
-        
-        let encodedQueryString = queryString.replacingOccurrences(of: " ", with: "%20")
+        let encodedQueryString = queryString.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "%20")
         let urlString = Constants.baseURL + Endpoints.skills + Endpoints.search + encodedQueryString
         
         print("🤸🏾‍♂️ \(urlString)")

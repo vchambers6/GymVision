@@ -13,16 +13,16 @@ class SkillUUIDStore {
     static let shared = SkillUUIDStore()
     
     private var mapping: [SkillClassifier.Label: String] = [
-        .backHandspringStepout : "B76A7FBD-940F-4E8A-B48A-0D9481A8F4F9",
-        .splitJump : "FB4A09CB-0D89-4843-97F6-43944422A364",
-        .sheepJump : "DFD8C864-8831-4315-995F-6225CBD5F311",
-        .fullTurn : "EB2015A0-A310-462B-8759-1EBAF72AAEA5",
-        .lTurn : "30359592-44FD-4602-92C0-2FD37078FF30",
-        .backLayoutStepout : "212F18A9-127F-43D4-984E-8FA174C0C240",
-        .backTuck : "B9518268-235C-4A5A-89BF-9CFB593FA199",
-        .sideAerial : "D4D00BA9-5E42-48BB-AFE6-F733777B7703",
-        .frontAerial : "B36A4D5F-07E6-418B-BE97-46C15BDE16A4",
-        .frontTuck : "6C8CCC45-ACCE-4FBF-8E4E-C1E214B55913"
+        .backHandspringStepout : "A6C4A026-DFB2-4219-B3BB-207499C96AF1",
+        .splitJump : "5361CB0E-F4F9-4F8A-BCB3-3E39DA462CAA",
+        .sheepJump : "A0A5C682-2D0A-480B-958E-9157031B3931",
+        .fullTurn : "C2F7725B-CC19-4637-9B51-A9EC61ED7524",
+        .lTurn : "C2F7725B-CC19-4637-9B51-A9EC61ED7524",
+        .backLayoutStepout : "BFDC00D0-7DED-47B8-AD23-3E1924D834C1",
+        .backTuck : "398F025C-0D17-4CC5-BBAC-5BC0E1355863",
+        .sideAerial : "FA43AE0B-F1A1-4B80-B83E-FABD13316CE8",
+        .frontAerial : "491FE0C1-B33B-43EB-B92F-72128C0DEE3A",
+        .frontTuck : "2EB4920D-702E-41A6-A425-4127A3905EB9"
     ]
     
     private init() {}
