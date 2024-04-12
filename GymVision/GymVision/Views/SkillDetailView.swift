@@ -118,7 +118,3 @@ struct SkillDetailView: View {
 }
 
 
-//
-//let skillsDictionary: [Double: Skill] = [
-//    35.204 : Skill(copNumber: 35.204, name: "Back Handspring Stepout", description: #"""Flic-flac with step-out, also with support on one arm"""#, apparatus: .BB, difficultyValue: "B", gifName: "back_handspring_so_3")
-//]
