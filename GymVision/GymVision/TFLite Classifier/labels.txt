@@ -1,0 +1,10 @@
+BackLayoutStepout,
+BackHandspringStepout,
+FrontAerial,
+FrontTuck,
+BackTuck,
+SideAerial,
+SplitJump,
+SheepJump,
+FullTurn,
+LTurn

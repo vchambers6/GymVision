@@ -17,9 +17,11 @@ class FrameViewModel: NSObject, ObservableObject {
     @Published var actionLabel: String?
     @Published var confidenceString: String?
     @Published var skillsObserved: [ActionPrediction] = []
+    @Published var testFrames = [TestFrame]()
     
     let frameHandler = FrameHandler()
-    let frameProcessingChain = FrameProcessingChain()
+//    let frameProcessingChain = FrameProcessingChain()
+    let frameProcessingChain = TFFrameProcessingChain(modelFileInfo: Model.modelInfo, labelsFileInfo: Model.labelsInfo)
     
     
     override init() {
@@ -60,6 +62,40 @@ extension FrameViewModel: FrameHandlerDelegate {
     }
 }
 
+extension FrameViewModel: TFFrameProcessingChainDelegate {
+    func frameProcessingChain(_ chain: TFFrameProcessingChain, didGet testFrames: [TestFrame]) {
+        DispatchQueue.main.async { [unowned self] in
+            self.testFrames = testFrames
+            
+        }
+    }
+    
+    func frameProcessingChain(_ chain: TFFrameProcessingChain, didGet frame: CGImage) {
+        
+        DispatchQueue.main.async { [unowned self] in
+            self.frame = frame
+            
+        }
+//        DispatchQueue.global(qos: .userInteractive).async {
+//            // MARK: found a bug here. the viewmodel was already deallocated, but for some reason the frame was not. I need to look into this
+//            
+//        }
+    }
+
+    
+    func frameProcessingChain(_ chain: TFFrameProcessingChain, didPredict actionPrediction: Inference, for frames: Int) {
+        print("😈 action prediction label \(actionPrediction.label)")
+        self.actionLabel = actionPrediction.label.replacingOccurrences(of: "\n", with: "")
+        self.confidenceString = actionPrediction.confidenceString
+        
+//            // Update the total number of frames for this action.
+//            addFrameCount(frameCount, to: actionPrediction.label)
+    
+    print("👀 LOOK HERE: label: \(actionLabel) and confidence: \(confidenceString)")
+//            addSkillObserved(actionPrediction)
+    }
+    
+}
 extension FrameViewModel: FrameProcessingChainDelegate {
     func frameProcessingChain(_ chain: FrameProcessingChain, didDetect poses: [Pose]?, in frame: CGImage) {
         // TODO: need to create and call drawposes in the user interactive queue threa

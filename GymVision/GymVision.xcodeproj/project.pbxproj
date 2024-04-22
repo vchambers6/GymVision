@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07E01AC706A756785D566887 /* Pods_GymVision_GymVisionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF8A3804B7F8AA77D50B675 /* Pods_GymVision_GymVisionUITests.framework */; };
 		670817F12BB5FBA80066DC22 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670817F02BB5FBA80066DC22 /* Skill.swift */; };
 		670817F52BB6009B0066DC22 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670817F42BB6009B0066DC22 /* GifImage.swift */; };
 		6738A8C52BC88BD8002A14D7 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738A8C42BC88BD8002A14D7 /* HomeCardView.swift */; };
@@ -80,6 +81,18 @@
 		67C7798E2BBE6C8900D8666E /* FetchedSkillDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7798D2BBE6C8900D8666E /* FetchedSkillDetailViewModel.swift */; };
 		67C779902BBF02C800D8666E /* SkillCategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7798F2BBF02C800D8666E /* SkillCategoryStore.swift */; };
 		67C779942BBF159800D8666E /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C779932BBF159800D8666E /* CategoryCardView.swift */; };
+		67EA27622BCDC42200EE6244 /* FetchedSkillDetailViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EA27612BCDC42200EE6244 /* FetchedSkillDetailViewModel_Tests.swift */; };
+		67F75C7B2BD1F34500A528CC /* TFActionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F75C7A2BD1F34500A528CC /* TFActionClassifier.swift */; };
+		67F75C7D2BD1F37E00A528CC /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F75C7C2BD1F37E00A528CC /* ModelDataHandler.swift */; };
+		67F75C842BD1FAB000A528CC /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67F75C832BD1FAB000A528CC /* labels.txt */; };
+		67F75C862BD3568D00A528CC /* TFActionClassifier+Inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F75C852BD3568D00A528CC /* TFActionClassifier+Inputs.swift */; };
+		67F75C882BD3765700A528CC /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F75C872BD3765700A528CC /* Math.swift */; };
+		67F75C8A2BD381AA00A528CC /* TFFrameProcessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F75C892BD381AA00A528CC /* TFFrameProcessingChain.swift */; };
+		67F75C8C2BD5A45E00A528CC /* TestModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F75C8B2BD5A45E00A528CC /* TestModelView.swift */; };
+		67F75C902BD5F7AF00A528CC /* InitialInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F75C8F2BD5F7AF00A528CC /* InitialInterpreter.swift */; };
+		67F75C922BD6058C00A528CC /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 67F75C912BD6058C00A528CC /* model.tflite */; };
+		6D0DDFC14F5738457A233B55 /* Pods_GymVisionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF75493D448EA8DFE235099 /* Pods_GymVisionTests.framework */; };
+		EB6C0EA4D50A83FE2C14903D /* Pods_GymVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33CED062FE3C5F7D115524A /* Pods_GymVision.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +113,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		135CD89FA77A3816A329ED1A /* Pods-GymVisionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymVisionTests.debug.xcconfig"; path = "Target Support Files/Pods-GymVisionTests/Pods-GymVisionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		40888A8D05433E279B948FAB /* Pods-GymVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymVision.release.xcconfig"; path = "Target Support Files/Pods-GymVision/Pods-GymVision.release.xcconfig"; sourceTree = "<group>"; };
 		670817F02BB5FBA80066DC22 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		670817F42BB6009B0066DC22 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		6738A8C42BC88BD8002A14D7 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
@@ -178,6 +193,23 @@
 		67C7798D2BBE6C8900D8666E /* FetchedSkillDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedSkillDetailViewModel.swift; sourceTree = "<group>"; };
 		67C7798F2BBF02C800D8666E /* SkillCategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCategoryStore.swift; sourceTree = "<group>"; };
 		67C779932BBF159800D8666E /* CategoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
+		67EA27612BCDC42200EE6244 /* FetchedSkillDetailViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedSkillDetailViewModel_Tests.swift; sourceTree = "<group>"; };
+		67F75C7A2BD1F34500A528CC /* TFActionClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFActionClassifier.swift; sourceTree = "<group>"; };
+		67F75C7C2BD1F37E00A528CC /* ModelDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		67F75C832BD1FAB000A528CC /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		67F75C852BD3568D00A528CC /* TFActionClassifier+Inputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TFActionClassifier+Inputs.swift"; sourceTree = "<group>"; };
+		67F75C872BD3765700A528CC /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		67F75C892BD381AA00A528CC /* TFFrameProcessingChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFFrameProcessingChain.swift; sourceTree = "<group>"; };
+		67F75C8B2BD5A45E00A528CC /* TestModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelView.swift; sourceTree = "<group>"; };
+		67F75C8F2BD5F7AF00A528CC /* InitialInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialInterpreter.swift; sourceTree = "<group>"; };
+		67F75C912BD6058C00A528CC /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
+		7C9ABFFBE878361DF3E7F32D /* Pods-GymVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymVision.debug.xcconfig"; path = "Target Support Files/Pods-GymVision/Pods-GymVision.debug.xcconfig"; sourceTree = "<group>"; };
+		B4219BA88D36BEB4178B778D /* Pods-GymVisionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymVisionTests.release.xcconfig"; path = "Target Support Files/Pods-GymVisionTests/Pods-GymVisionTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE822D328D3B7CD00554ACC5 /* Pods-GymVision-GymVisionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymVision-GymVisionUITests.debug.xcconfig"; path = "Target Support Files/Pods-GymVision-GymVisionUITests/Pods-GymVision-GymVisionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C33CED062FE3C5F7D115524A /* Pods_GymVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF8A3804B7F8AA77D50B675 /* Pods_GymVision_GymVisionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymVision_GymVisionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A9964CDF62C37E0341EE65 /* Pods-GymVision-GymVisionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymVision-GymVisionUITests.release.xcconfig"; path = "Target Support Files/Pods-GymVision-GymVisionUITests/Pods-GymVision-GymVisionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FCF75493D448EA8DFE235099 /* Pods_GymVisionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymVisionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6C0EA4D50A83FE2C14903D /* Pods_GymVision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0DDFC14F5738457A233B55 /* Pods_GymVisionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +233,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E01AC706A756785D566887 /* Pods_GymVision_GymVisionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15DFC906E8EC4F1126A4499B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C33CED062FE3C5F7D115524A /* Pods_GymVision.framework */,
+				CFF8A3804B7F8AA77D50B675 /* Pods_GymVision_GymVisionUITests.framework */,
+				FCF75493D448EA8DFE235099 /* Pods_GymVisionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AF0493BBF652F673425A4F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C9ABFFBE878361DF3E7F32D /* Pods-GymVision.debug.xcconfig */,
+				40888A8D05433E279B948FAB /* Pods-GymVision.release.xcconfig */,
+				BE822D328D3B7CD00554ACC5 /* Pods-GymVision-GymVisionUITests.debug.xcconfig */,
+				F7A9964CDF62C37E0341EE65 /* Pods-GymVision-GymVisionUITests.release.xcconfig */,
+				135CD89FA77A3816A329ED1A /* Pods-GymVisionTests.debug.xcconfig */,
+				B4219BA88D36BEB4178B778D /* Pods-GymVisionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		673FCD8A2BB64D6200DC7B1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +352,8 @@
 				676F446D2B7D841F0059328B /* GymVisionTests */,
 				676F44772B7D841F0059328B /* GymVisionUITests */,
 				676F445A2B7D841D0059328B /* Products */,
+				3AF0493BBF652F673425A4F4 /* Pods */,
+				15DFC906E8EC4F1126A4499B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,6 +370,7 @@
 		676F445B2B7D841D0059328B /* GymVision */ = {
 			isa = PBXGroup;
 			children = (
+				67F75C792BD1F32300A528CC /* TFLite Classifier */,
 				67661C8F2B83F0EB0049DBEF /* Action Classifier */,
 				676F445E2B7D841D0059328B /* ContentView.swift */,
 				676F44652B7D841F0059328B /* GymVisionApp.entitlements */,
@@ -339,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				676F446E2B7D841F0059328B /* GymVisionTests.swift */,
+				67EA27612BCDC42200EE6244 /* FetchedSkillDetailViewModel_Tests.swift */,
 			);
 			path = GymVisionTests;
 			sourceTree = "<group>";
@@ -394,6 +456,7 @@
 				67C779932BBF159800D8666E /* CategoryCardView.swift */,
 				6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */,
 				6738A8C42BC88BD8002A14D7 /* HomeCardView.swift */,
+				67F75C8B2BD5A45E00A528CC /* TestModelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,8 +469,23 @@
 				67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */,
 				67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */,
 				67A978FF2B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift */,
+				67F75C892BD381AA00A528CC /* TFFrameProcessingChain.swift */,
 			);
 			path = "Video Capture + Processing";
+			sourceTree = "<group>";
+		};
+		67F75C792BD1F32300A528CC /* TFLite Classifier */ = {
+			isa = PBXGroup;
+			children = (
+				67F75C912BD6058C00A528CC /* model.tflite */,
+				67F75C832BD1FAB000A528CC /* labels.txt */,
+				67F75C7A2BD1F34500A528CC /* TFActionClassifier.swift */,
+				67F75C7C2BD1F37E00A528CC /* ModelDataHandler.swift */,
+				67F75C852BD3568D00A528CC /* TFActionClassifier+Inputs.swift */,
+				67F75C872BD3765700A528CC /* Math.swift */,
+				67F75C8F2BD5F7AF00A528CC /* InitialInterpreter.swift */,
+			);
+			path = "TFLite Classifier";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +495,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 676F447E2B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymVision" */;
 			buildPhases = (
+				965D4A64FC3505A8D7EB6B9E /* [CP] Check Pods Manifest.lock */,
 				676F44552B7D841D0059328B /* Sources */,
 				676F44562B7D841D0059328B /* Frameworks */,
 				676F44572B7D841D0059328B /* Resources */,
@@ -426,8 +505,6 @@
 			dependencies = (
 			);
 			name = GymVision;
-			packageProductDependencies = (
-			);
 			productName = LiveCameraSwiftUI;
 			productReference = 676F44592B7D841D0059328B /* GymVision.app */;
 			productType = "com.apple.product-type.application";
@@ -436,6 +513,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 676F44812B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymVisionTests" */;
 			buildPhases = (
+				900861AC5A7BC3AB04821149 /* [CP] Check Pods Manifest.lock */,
 				676F44662B7D841F0059328B /* Sources */,
 				676F44672B7D841F0059328B /* Frameworks */,
 				676F44682B7D841F0059328B /* Resources */,
@@ -454,6 +532,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 676F44842B7D841F0059328B /* Build configuration list for PBXNativeTarget "GymVisionUITests" */;
 			buildPhases = (
+				C0C5E16E9C4FA7AD035C0CF8 /* [CP] Check Pods Manifest.lock */,
 				676F44702B7D841F0059328B /* Sources */,
 				676F44712B7D841F0059328B /* Frameworks */,
 				676F44722B7D841F0059328B /* Resources */,
@@ -500,8 +579,6 @@
 				Base,
 			);
 			mainGroup = 676F44502B7D841D0059328B;
-			packageReferences = (
-			);
 			productRefGroup = 676F445A2B7D841D0059328B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -524,12 +601,14 @@
 				673FCDDB2BB673ED00DC7B1C /* Poppins-Italic.ttf in Resources */,
 				673FCDDE2BB673ED00DC7B1C /* Poppins-Medium.ttf in Resources */,
 				673FCDE12BB673ED00DC7B1C /* Poppins-SemiBold.ttf in Resources */,
+				67F75C922BD6058C00A528CC /* model.tflite in Resources */,
 				673FCDD32BB673ED00DC7B1C /* Poppins-Black.ttf in Resources */,
 				673FCDD42BB673ED00DC7B1C /* Poppins-BlackItalic.ttf in Resources */,
 				673FCDDF2BB673ED00DC7B1C /* Poppins-MediumItalic.ttf in Resources */,
 				673FCDE32BB673ED00DC7B1C /* Poppins-Thin.ttf in Resources */,
 				673FCDD22BB673ED00DC7B1C /* OFL.txt in Resources */,
 				673FCDDD2BB673ED00DC7B1C /* Poppins-LightItalic.ttf in Resources */,
+				67F75C842BD1FAB000A528CC /* labels.txt in Resources */,
 				673FCDD52BB673ED00DC7B1C /* Poppins-Bold.ttf in Resources */,
 				676F44642B7D841F0059328B /* Preview Assets.xcassets in Resources */,
 				673FCDD82BB673ED00DC7B1C /* Poppins-ExtraBoldItalic.ttf in Resources */,
@@ -560,6 +639,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		900861AC5A7BC3AB04821149 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymVisionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		965D4A64FC3505A8D7EB6B9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymVision-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0C5E16E9C4FA7AD035C0CF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymVision-GymVisionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		676F44552B7D841D0059328B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -576,13 +724,16 @@
 				676F448F2B7D9AD50059328B /* Pose+Landmark.swift in Sources */,
 				674848D52B8A9AFB00D0C340 /* TopNavigationBar.swift in Sources */,
 				67661C992B83F2250049DBEF /* SkillClassifier+Label.swift in Sources */,
+				67F75C902BD5F7AF00A528CC /* InitialInterpreter.swift in Sources */,
 				676F44882B7D84290059328B /* FrameView.swift in Sources */,
 				676F445F2B7D841D0059328B /* ContentView.swift in Sources */,
 				6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */,
 				670817F52BB6009B0066DC22 /* GifImage.swift in Sources */,
 				67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */,
+				67F75C7B2BD1F34500A528CC /* TFActionClassifier.swift in Sources */,
 				677E75692BBD2CF500FE3171 /* FetchedSkillDetailView.swift in Sources */,
 				67B4F4FD2BBCF10200B83851 /* SearchView.swift in Sources */,
+				67F75C862BD3568D00A528CC /* TFActionClassifier+Inputs.swift in Sources */,
 				67661C952B83F1EB0049DBEF /* SkillClassifier+Singleton.swift in Sources */,
 				6794ACD62BC31C1200E2ECD8 /* SkillTableRowView.swift in Sources */,
 				676F448A2B7D84C30059328B /* FrameHandler.swift in Sources */,
@@ -607,8 +758,12 @@
 				67661CA42B86F1E20049DBEF /* FrameViewModel.swift in Sources */,
 				676F448D2B7D9ABB0059328B /* Pose.swift in Sources */,
 				676869192BBBBB8E00EA5E0A /* SkillDetailViewModel.swift in Sources */,
+				67F75C882BD3765700A528CC /* Math.swift in Sources */,
 				67B4F4F92BBCEB5200B83851 /* SearchBarView.swift in Sources */,
+				67F75C8C2BD5A45E00A528CC /* TestModelView.swift in Sources */,
 				67A979072B88083500B605AB /* HomeView.swift in Sources */,
+				67F75C7D2BD1F37E00A528CC /* ModelDataHandler.swift in Sources */,
+				67F75C8A2BD381AA00A528CC /* TFFrameProcessingChain.swift in Sources */,
 				67A978FE2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift in Sources */,
 				676869142BBBBA4800EA5E0A /* HttpClient.swift in Sources */,
 				67A979002B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
@@ -619,6 +774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67EA27622BCDC42200EE6244 /* FetchedSkillDetailViewModel_Tests.swift in Sources */,
 				676F446F2B7D841F0059328B /* GymVisionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,6 +926,7 @@
 		};
 		676F447F2B7D841F0059328B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C9ABFFBE878361DF3E7F32D /* Pods-GymVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -785,6 +942,7 @@
 				INFOPLIST_FILE = GymVision/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Can we access th ephoto library";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -804,6 +962,7 @@
 		};
 		676F44802B7D841F0059328B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40888A8D05433E279B948FAB /* Pods-GymVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -819,6 +978,7 @@
 				INFOPLIST_FILE = GymVision/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Can we access th ephoto library";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -838,6 +998,7 @@
 		};
 		676F44822B7D841F0059328B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 135CD89FA77A3816A329ED1A /* Pods-GymVisionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -857,6 +1018,7 @@
 		};
 		676F44832B7D841F0059328B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4219BA88D36BEB4178B778D /* Pods-GymVisionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -876,6 +1038,7 @@
 		};
 		676F44852B7D841F0059328B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE822D328D3B7CD00554ACC5 /* Pods-GymVision-GymVisionUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -893,6 +1056,7 @@
 		};
 		676F44862B7D841F0059328B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A9964CDF62C37E0341EE65 /* Pods-GymVision-GymVisionUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

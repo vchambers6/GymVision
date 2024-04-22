@@ -45,7 +45,11 @@ struct FrameView: View {
                             }
                         }
                         ToolbarItem(placement: .topBarTrailing) {
-                            NavigationLink(destination: OverviewView(isCameraActive: $isCameraActive, skillsObserved: viewModel.skillsObserved)) {
+                            NavigationLink(destination:
+                                            TestModelView(skillsFrames: viewModel.testFrames)
+//                                            OverviewView(isCameraActive: $isCameraActive, skillsObserved: viewModel.skillsObserved)
+                            
+                            ) {
                                 OverviewButton()
                             }
                         }

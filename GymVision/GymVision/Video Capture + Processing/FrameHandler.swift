@@ -143,9 +143,9 @@ class FrameHandler: NSObject, ObservableObject {
         // Finalize the configuration after this method returns.
         defer { captureSession.commitConfiguration() }
 
-        // MARK: Uncomment this to try out the stuff that GuessMyExercise did -- it works but the orientation is off lolol
-        // Set the video camera to run at the action classifier's frame rate.
-        let modelFrameRate = SkillClassifier.frameRate
+        
+        // MARK: I want the frame rate to be 30, but right now the model only takes in 24 frames at a time.
+        let modelFrameRate = 30.0 // SkillClassifier.frameRate
 
         let input = AVCaptureDeviceInput.createCameraInput(position: AVCaptureDevice.Position.back,
                                                            frameRate: modelFrameRate)

@@ -84,6 +84,7 @@ struct HomeView: View {
                 }.navigationBarBackButtonHidden()
             }
         }
+        
         /// Info button and info overlay
         .overlay(alignment: .bottomTrailing) {
             Button {
