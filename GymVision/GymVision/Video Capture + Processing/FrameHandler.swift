@@ -145,7 +145,7 @@ class FrameHandler: NSObject, ObservableObject {
 
         
         // MARK: I want the frame rate to be 30, but right now the model only takes in 24 frames at a time.
-        let modelFrameRate = 30.0 // SkillClassifier.frameRate
+        let modelFrameRate = 24.0 // SkillClassifier.frameRate
 
         let input = AVCaptureDeviceInput.createCameraInput(position: AVCaptureDevice.Position.back,
                                                            frameRate: modelFrameRate)

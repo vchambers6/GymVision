@@ -73,7 +73,7 @@ class TFFrameProcessingChain {
     ///
     /// Increase the stride's value to make predictions less frequently.
     /// - Tag: windowStride
-    private let windowStride = 8
+    private let windowStride = 16
 
     /// A performance reporter that logs the number of predictions and frames
     /// that pass through the chain.
