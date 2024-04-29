@@ -8,7 +8,11 @@
 import Foundation
 
 enum Constants {
-    static let baseURL = "https://skilled-minnow-moved.ngrok-free.app/"
+    // dev URL
+//    static let baseURL = "https://skilled-minnow-moved.ngrok-free.app/"
+    
+    // prod URL
+    static let baseURL = "https://gymvision-api-b3115888f3cb.herokuapp.com/"
 }
 
 enum Endpoints {
