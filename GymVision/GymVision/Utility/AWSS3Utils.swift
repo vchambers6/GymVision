@@ -13,8 +13,13 @@ class AWSS3GifLoader {
     let gifKey = "skills_videos/Arabian.gif"
     
     public func authenticate() {
-        let accessKey = ProcessInfo.processInfo.environment["ACCESS_KEY_ID"] ?? "YOUR_ACCESS_KEY_ID"
-        let secretKey = ProcessInfo.processInfo.environment["SECRET_KEY"] ?? "YOUR_SECRET_ACCESS_KEY"
+        // MARK: using env variables
+//        let accessKey = ProcessInfo.processInfo.environment["ACCESS_KEY_ID"] ?? "YOUR_ACCESS_KEY_ID"
+//        let secretKey = ProcessInfo.processInfo.environment["SECRET_KEY"] ?? "YOUR_SECRET_ACCESS_KEY"
+        // MARK: using config:
+        
+        let accessKey = Bundle.main.infoDictionary?["ACCESS_KEY_ID"] as? String ?? "YOUR_ACCESS_KEY_ID"
+        let secretKey = Bundle.main.infoDictionary?["SECRET_KEY"] as? String ?? "YOUR_SECRET_ACCESS_KEY"
         let credentialsProvider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
         let serviceConfiguration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
