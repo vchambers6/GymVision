@@ -34,16 +34,19 @@ struct SkillDetailView: View {
                                 .font(AppFonts.LargeTitleBolder.font)
                                 .foregroundColor(Color.primaryTitleText)
                                 .multilineTextAlignment(.center)
-                            
+                            if let gifData = viewModel.gifData {
+                                GifImageLoader(data: gifData, cornerRadius: 20)//.clipShape(.rect(cornerRadius: 20), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
+                                Text("Scroll to see more")
+                                    .font(AppFonts.PlainText.font)
+                                    .foregroundColor(.gray)
+                                    .padding(.top, 20)
+                                Image(systemName: "arrow.down")
+                                    .font(.system(size: 18))
+                                    .foregroundColor(.gray)
+                            }
 //                            GifImage(gifName, cornerRadius: 20)
-                            GifImageLoader(data: viewModel.gifData!, cornerRadius: 20)
-                            Text("Scroll to see more")
-                                .font(AppFonts.PlainText.font)
-                                .foregroundColor(.gray)
-                                .padding(.top, 20)
-                            Image(systemName: "arrow.down")
-                                .font(.system(size: 18))
-                                .foregroundColor(.gray)
+//
+                            
                         }.padding(30)
                     }.frame(idealHeight: UIScreen.main.bounds.height - 100)
                     

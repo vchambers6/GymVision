@@ -33,9 +33,11 @@ struct GifImageLoader: UIViewRepresentable {
         
         webView.layer.cornerRadius = cornerRadius
         webView.layer.masksToBounds = true
-        
+       
         return webView
     }
+    
+    
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
         uiView.reload()

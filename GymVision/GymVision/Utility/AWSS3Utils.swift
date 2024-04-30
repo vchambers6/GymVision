@@ -11,9 +11,19 @@ import AWSS3
 class AWSS3GifLoader {
     let s3Bucket = "3605e390-a72e-480b-8435-19d7a740a2a9"
     let gifKey = "skills_videos/Arabian.gif"
+    
+    public func authenticate() {
+        let accessKey = ProcessInfo.processInfo.environment["ACCESS_KEY_ID"] ?? "YOUR_ACCESS_KEY_ID"
+        let secretKey = ProcessInfo.processInfo.environment["SECRET_KEY"] ?? "YOUR_SECRET_ACCESS_KEY"
+        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
+        let serviceConfiguration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
+    }
     public func downloadGIFFromS3(bucket: String, key: String, completion: @escaping (Data?, Error?) -> Void) {
-        let transferUtility = AWSS3TransferUtility.default()
+        self.authenticate()
         
+        let transferUtility = AWSS3TransferUtility.default()
+        print("🤲🏾here's the bucket: \(bucket) and key \(key)")
         let expression = AWSS3TransferUtilityDownloadExpression()
         expression.progressBlock = { (task, progress) in
             // what do i put here
@@ -30,6 +40,7 @@ class AWSS3GifLoader {
                     }
 
                     if let data = data {
+                        print("❤️ this is the data \(data)")
                         // Successfully downloaded data
                         completion(data, nil)
                     } else {

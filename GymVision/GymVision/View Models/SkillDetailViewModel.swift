@@ -80,16 +80,19 @@ class SkillDetailViewModel: ObservableObject {
     
     func fetchGifFromS3() {
         let bucket = "3605e390-a72e-480b-8435-19d7a740a2a9"
-        let key = "skills_videos/Arabian.gif"
+        let key = "skills_videos/output.gif"
         let awsDataLoader = AWSS3GifLoader()
-        awsDataLoader.downloadGIFFromS3(bucket: bucket, key: key) { [self] data, error in
-            if let data = data {
-                gifData = data
-            } else if let error = error {
-                print("👺 ERROR DOWNLOAD GIF FROM S3")
-                fatalError()
+        DispatchQueue.main.async {
+            awsDataLoader.downloadGIFFromS3(bucket: bucket, key: key) { [self] data, error in
+                if let data = data {
+                    gifData = data
+                } else if let error = error {
+                    print("👺 ERROR DOWNLOAD GIF FROM S3 \(error)")
+                    fatalError()
+                }
             }
         }
+        
     }
     
     func getNiceName(for gymnast: Gymnast, wag: Bool) -> String {
