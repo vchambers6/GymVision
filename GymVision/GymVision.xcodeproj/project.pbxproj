@@ -170,7 +170,7 @@
 		676F44952B7DB13B0059328B /* PerformanceReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceReporter.swift; sourceTree = "<group>"; };
 		677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedSkillDetailView.swift; sourceTree = "<group>"; };
 		6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTableRowView.swift; sourceTree = "<group>"; };
-		6796C8262BE1A8C700928180 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6796C8272BE1A9FD00928180 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		679D3CB92BBB738600793D26 /* SkillUUIDStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillUUIDStore.swift; sourceTree = "<group>"; };
 		67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 		676F44502B7D841D0059328B = {
 			isa = PBXGroup;
 			children = (
-				6796C8262BE1A8C700928180 /* Config.xcconfig */,
+				6796C8272BE1A9FD00928180 /* Config.xcconfig */,
 				676F445B2B7D841D0059328B /* GymVision */,
 				676F446D2B7D841F0059328B /* GymVisionTests */,
 				676F44772B7D841F0059328B /* GymVisionUITests */,
@@ -804,6 +804,7 @@
 /* Begin XCBuildConfiguration section */
 		676F447C2B7D841F0059328B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6796C8272BE1A9FD00928180 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -868,6 +869,7 @@
 		};
 		676F447D2B7D841F0059328B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6796C8272BE1A9FD00928180 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

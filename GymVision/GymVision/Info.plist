@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ACCESS_KEY_ID</key>
+	<string>$(ACCESS_KEY_ID)</string>
 	<key>AWS</key>
 	<dict>
 		<key>S3TransferManager</key>
@@ -39,6 +41,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>SECRET_KEY</key>
+	<string>$(SECRET_KEY)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Black.ttf</string>
