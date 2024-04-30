@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		670817F12BB5FBA80066DC22 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670817F02BB5FBA80066DC22 /* Skill.swift */; };
 		670817F52BB6009B0066DC22 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670817F42BB6009B0066DC22 /* GifImage.swift */; };
+		6719FF3E2BE06C940068DD60 /* AWSS3Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719FF3D2BE06C940068DD60 /* AWSS3Utils.swift */; };
+		6719FF402BE088E80068DD60 /* GifImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719FF3F2BE088E80068DD60 /* GifImageLoader.swift */; };
+		6719FF4B2BE092220068DD60 /* AWSCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6719FF4A2BE092220068DD60 /* AWSCore */; };
+		6719FF4D2BE092220068DD60 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = 6719FF4C2BE092220068DD60 /* AWSS3 */; };
 		6738A8C52BC88BD8002A14D7 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738A8C42BC88BD8002A14D7 /* HomeCardView.swift */; };
 		673FCD892BB6472C00DC7B1C /* back_handspring_so_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 673FCD882BB6472C00DC7B1C /* back_handspring_so_3.gif */; };
 		673FCD8C2BB64DB900DC7B1C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673FCD8B2BB64DB900DC7B1C /* Colors.xcassets */; };
@@ -102,6 +106,8 @@
 /* Begin PBXFileReference section */
 		670817F02BB5FBA80066DC22 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		670817F42BB6009B0066DC22 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		6719FF3D2BE06C940068DD60 /* AWSS3Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSS3Utils.swift; sourceTree = "<group>"; };
+		6719FF3F2BE088E80068DD60 /* GifImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageLoader.swift; sourceTree = "<group>"; };
 		6738A8C42BC88BD8002A14D7 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		673FCD882BB6472C00DC7B1C /* back_handspring_so_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = back_handspring_so_3.gif; sourceTree = SOURCE_ROOT; };
 		673FCD8B2BB64DB900DC7B1C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6719FF4D2BE092220068DD60 /* AWSS3 in Frameworks */,
+				6719FF4B2BE092220068DD60 /* AWSCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +380,7 @@
 				676869132BBBBA4800EA5E0A /* HttpClient.swift */,
 				676869152BBBBB0A00EA5E0A /* Constants.swift */,
 				67C7798F2BBF02C800D8666E /* SkillCategoryStore.swift */,
+				6719FF3D2BE06C940068DD60 /* AWSS3Utils.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -394,6 +403,7 @@
 				67C779932BBF159800D8666E /* CategoryCardView.swift */,
 				6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */,
 				6738A8C42BC88BD8002A14D7 /* HomeCardView.swift */,
+				6719FF3F2BE088E80068DD60 /* GifImageLoader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +437,8 @@
 			);
 			name = GymVision;
 			packageProductDependencies = (
+				6719FF4A2BE092220068DD60 /* AWSCore */,
+				6719FF4C2BE092220068DD60 /* AWSS3 */,
 			);
 			productName = LiveCameraSwiftUI;
 			productReference = 676F44592B7D841D0059328B /* GymVision.app */;
@@ -501,6 +513,7 @@
 			);
 			mainGroup = 676F44502B7D841D0059328B;
 			packageReferences = (
+				6719FF492BE092220068DD60 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */,
 			);
 			productRefGroup = 676F445A2B7D841D0059328B /* Products */;
 			projectDirPath = "";
@@ -579,6 +592,7 @@
 				676F44882B7D84290059328B /* FrameView.swift in Sources */,
 				676F445F2B7D841D0059328B /* ContentView.swift in Sources */,
 				6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */,
+				6719FF402BE088E80068DD60 /* GifImageLoader.swift in Sources */,
 				670817F52BB6009B0066DC22 /* GifImage.swift in Sources */,
 				67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */,
 				677E75692BBD2CF500FE3171 /* FetchedSkillDetailView.swift in Sources */,
@@ -594,6 +608,7 @@
 				673FCD8F2BB64DFF00DC7B1C /* ThemeProtocol.swift in Sources */,
 				6756BA022B89B1A700DE1490 /* SkillDetailView.swift in Sources */,
 				676F44932B7D9B000059328B /* Pose+Empty.swift in Sources */,
+				6719FF3E2BE06C940068DD60 /* AWSS3Utils.swift in Sources */,
 				67A979042B87FE8C00B605AB /* OverviewView.swift in Sources */,
 				673FCD912BB64E4100DC7B1C /* ThemeManager.swift in Sources */,
 				676F44962B7DB13B0059328B /* PerformanceReporter.swift in Sources */,
@@ -948,6 +963,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6719FF492BE092220068DD60 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/aws-sdk-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.36.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6719FF4A2BE092220068DD60 /* AWSCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6719FF492BE092220068DD60 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
+			productName = AWSCore;
+		};
+		6719FF4C2BE092220068DD60 /* AWSS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6719FF492BE092220068DD60 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
+			productName = AWSS3;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 676F44512B7D841D0059328B /* Project object */;
 }

@@ -10,22 +10,26 @@
 import SwiftUI
 import WebKit
 
-struct GifImage: UIViewRepresentable {
-    private let name: String
+struct GifImageLoader: UIViewRepresentable {
+    private var data: Data
     private let cornerRadius: CGFloat
     
-    init(_ name: String, cornerRadius: CGFloat = 0) {
-        self.name = name
+    init(data: Data, cornerRadius: CGFloat = 0) {
         self.cornerRadius = cornerRadius
+        self.data = data
     }
+    
 
     func makeUIView(context: Context) -> WKWebView {
+       
         let webView = WKWebView()
-        let url = Bundle.main.url(forResource: name, withExtension: "gif")!
+//        let url = Bundle.main.url(forResource: name, withExtension: "gif")!
+//
+//        let data = try! Data(contentsOf: url)
+//
 
-        let data = try! Data(contentsOf: url)
         
-        webView.load(data, mimeType: "image/gif", characterEncodingName: "UTF-8", baseURL: url.deletingLastPathComponent())
+        webView.load(self.data, mimeType: "image/gif", characterEncodingName: "UTF-8", baseURL: URL(string: "about:blank")!)
         
         webView.layer.cornerRadius = cornerRadius
         webView.layer.masksToBounds = true

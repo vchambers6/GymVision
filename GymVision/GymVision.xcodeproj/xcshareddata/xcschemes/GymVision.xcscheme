@@ -73,6 +73,13 @@
             ReferencedContainer = "container:GymVision.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "S3_BUCKET"
+            value = "3605e390-a72e-480b-8435-19d7a740a2a9"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

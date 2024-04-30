@@ -15,8 +15,10 @@ struct HomeView: View {
     // TODO: Need to put this and other text in a viewmodel -- will do this once I have more cards to go through because it may involve http requests
     let currentUpdateFeatures = ["The GymVision Smart Camera, which can identify 100 of the most common balance beam elements", "A searchable databse of all Women's Artistic Gymnastics skills"]
     
+    
     var body: some View {
         NavigationView {
+            
             ZStack {
                 /// BG Color
                 Color.primaryBG.ignoresSafeArea(.all)

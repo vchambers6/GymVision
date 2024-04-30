@@ -17,6 +17,7 @@ class SkillDetailViewModel: ObservableObject {
     @Published var categoryLabel: String = "No Category"
     @Published var categoryDescription: String = "No description at this time."
     @Published var namedAfterString: String?
+    @Published var gifData: Data?
     
     
     
@@ -70,6 +71,23 @@ class SkillDetailViewModel: ObservableObject {
                 self.namedAfterString = prefix + suffix + ". It was added to the code of points in " + String(yearNamed) + "."
             } else {
                 self.namedAfterString = prefix + suffix + "."
+            }
+        }
+        
+        //MARK: gif feetching code
+        fetchGifFromS3()
+    }
+    
+    func fetchGifFromS3() {
+        let bucket = "3605e390-a72e-480b-8435-19d7a740a2a9"
+        let key = "skills_videos/Arabian.gif"
+        let awsDataLoader = AWSS3GifLoader()
+        awsDataLoader.downloadGIFFromS3(bucket: bucket, key: key) { [self] data, error in
+            if let data = data {
+                gifData = data
+            } else if let error = error {
+                print("👺 ERROR DOWNLOAD GIF FROM S3")
+                fatalError()
             }
         }
     }
