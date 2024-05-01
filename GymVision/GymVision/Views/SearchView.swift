@@ -25,7 +25,9 @@ struct SearchView: View {
                 Color.primaryBG.ignoresSafeArea(.all)
                 HStack {
                     switch loadingState {
-                    case .loading, .dormant:
+                    case .loading:
+                        ProgressView()
+                    case .dormant:
                         List(viewModel.skills) { skill in
                             // TODO: NEED TO CHANGE THE UUID TO WHATEVER VAL IN DICT FOR THAT SKILL instead of the hard coded string -- i think i've already doen that??
                             NavigationLink(destination: SkillDetailView(skill: skill)) {

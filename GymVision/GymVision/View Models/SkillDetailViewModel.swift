@@ -7,6 +7,7 @@
 //  This class just separates the logic for generating all of the text for the skill detail view. 
 
 import SwiftUI
+import AWSS3
 
 
 class SkillDetailViewModel: ObservableObject {
@@ -80,18 +81,47 @@ class SkillDetailViewModel: ObservableObject {
     
     func fetchGifFromS3() {
         let bucket = "3605e390-a72e-480b-8435-19d7a740a2a9"
-        let key = "skills_videos/output.gif"
-        let awsDataLoader = AWSS3GifLoader()
-        DispatchQueue.main.async {
-            awsDataLoader.downloadGIFFromS3(bucket: bucket, key: key) { [self] data, error in
-                if let data = data {
-                    gifData = data
-                } else if let error = error {
-                    print("👺 ERROR DOWNLOAD GIF FROM S3 \(error)")
-                    fatalError()
-                }
-            }
+        let key = "skills_videos/Arabian.gif"
+        
+        let transferUtility = AWSS3TransferUtility.default()
+        print("🤲🏾here's the bucket: \(bucket) and key \(key)")
+        let expression = AWSS3TransferUtilityDownloadExpression()
+        expression.progressBlock = { (task, progress) in
+            // what do i put here
+            print("❤️ progress: \(progress)")
         }
+        
+        transferUtility.downloadData(
+                fromBucket: bucket,
+                key: key,
+                expression: expression,
+                completionHandler: { [weak self] (task, url, data, error) in
+                    guard let self = self else { return }
+                    if let error = error {
+                        print("Error downloading GIF: \(error)")
+                        return
+                    } else if let data = data {
+                        // Successfully downloaded data
+                        DispatchQueue.main.async {
+                            self.gifData = data
+                        }
+                    }
+                }
+        )
+ 
+        
+        
+//        let awsDataLoader = AWSS3GifLoader()
+//        DispatchQueue.main.async {
+//            awsDataLoader.downloadGIFFromS3(bucket: bucket, key: key) { [self] data, error in
+//                if let data = data {
+//                    gifData = data
+//                } else if let error = error {
+//                    print("👺 ERROR DOWNLOAD GIF FROM S3 \(error)")
+//                    fatalError()
+//                }
+//            }
+//        }
         
     }
     

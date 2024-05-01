@@ -25,7 +25,7 @@ class AWSS3GifLoader {
         AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
     }
     public func downloadGIFFromS3(bucket: String, key: String, completion: @escaping (Data?, Error?) -> Void) {
-        self.authenticate()
+//        self.authenticate()
         
         let transferUtility = AWSS3TransferUtility.default()
         print("🤲🏾here's the bucket: \(bucket) and key \(key)")
