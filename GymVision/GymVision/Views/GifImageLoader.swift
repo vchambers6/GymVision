@@ -9,38 +9,42 @@
 
 import SwiftUI
 import WebKit
+import SwiftGifOrigin
 
 struct GifImageLoader: UIViewRepresentable {
     private var data: Data
-    private let cornerRadius: CGFloat
     
-    init(data: Data, cornerRadius: CGFloat = 0) {
-        self.cornerRadius = cornerRadius
+    init(data: Data) {
         self.data = data
     }
     
 
-    func makeUIView(context: Context) -> WKWebView {
-       
-        let webView = WKWebView()
-//        let url = Bundle.main.url(forResource: name, withExtension: "gif")!
+    func makeUIView(context: Context) -> UIImageView {
+        let image = UIImage.gif(data: self.data)!
+        let imageView = UIImageView(image: image)
+        return imageView
+//        Image(uiImage:)
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//        let webView = WKWebView()
+////        let url = Bundle.main.url(forResource: name, withExtension: "gif")!
+////
+////        let data = try! Data(contentsOf: url)
+////
 //
-//        let data = try! Data(contentsOf: url)
-//
-
-        
-        webView.load(self.data, mimeType: "image/gif", characterEncodingName: "UTF-8", baseURL: URL(string: "about:blank")!)
-        
-        webView.layer.cornerRadius = cornerRadius
-        webView.layer.masksToBounds = true
-       
-        return webView
+//        
+//        webView.load(self.data, mimeType: "image/gif", characterEncodingName: "UTF-8", baseURL: URL(string: "about:blank")!)
+//        
+//        webView.layer.cornerRadius = cornerRadius
+//        webView.layer.masksToBounds = true
+//       
+//        return webView
     }
     
     
     
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        uiView.reload()
+    func updateUIView(_ uiView: UIImageView, context: Context) {
+//        uiView.reload()
     }
 }
 

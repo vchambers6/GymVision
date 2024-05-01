@@ -4,8 +4,13 @@ platform :ios, '17.0'
 target 'GymVision' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+	
+  # For AWSS3
   pod 'AWSCore'
   pod 'AWSS3'
+
+  # Gif Display
+  pod 'SwiftGifOrigin', '~> 1.7.0'
 
   # Pods for GymVision
 

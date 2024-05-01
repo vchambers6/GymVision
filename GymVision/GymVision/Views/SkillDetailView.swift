@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftGifOrigin
 
 struct SkillDetailView: View {
     
@@ -36,7 +37,10 @@ struct SkillDetailView: View {
                                 .multilineTextAlignment(.center)
                             if let gifData = viewModel.gifData {
                                 // TODO: Need to figure out how to rezie with the low res images, because I don't want to have to blow them up. 
-                                GifImageLoader(data: gifData, cornerRadius: 20)
+                                GifImageLoader(data: gifData).clipShape(.rect(cornerRadius: 20))
+                                
+                                
+
                                 Text("Scroll to see more")
                                     .font(AppFonts.PlainText.font)
                                     .foregroundColor(.gray)

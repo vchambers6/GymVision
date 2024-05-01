@@ -2,20 +2,24 @@ PODS:
   - AWSCore (2.36.0)
   - AWSS3 (2.36.0):
     - AWSCore (= 2.36.0)
+  - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
   - AWSCore
   - AWSS3
+  - SwiftGifOrigin (~> 1.7.0)
 
 SPEC REPOS:
   trunk:
     - AWSCore
     - AWSS3
+    - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   AWSCore: 6a3038e6c0b13be3d1fbb4746f98aab44f750e4d
   AWSS3: f073fbcd77d59baf4bdaf7a9732747dca477fb3b
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: 6d52a2e83abe8f48e98ec7e174622428325b6088
+PODFILE CHECKSUM: 11ad5e378acd21db7317c2e5a037056e52deaf99
 
 COCOAPODS: 1.15.2
