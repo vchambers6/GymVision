@@ -21,6 +21,8 @@ struct Skill: Identifiable, Codable {
     var namedAfterWAG: [Gymnast]?
     var namedAfterMAG: [Gymnast]?
     var yearNamed: Int?
+    var hasGif: Bool?
+    var className: String?
     
     /// These two columns are here for internal purposes
     var createdAt: Date?

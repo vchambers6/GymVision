@@ -76,12 +76,18 @@ class SkillDetailViewModel: ObservableObject {
         }
         
         //MARK: gif feetching code
-        fetchGifFromS3()
+        if let hasGif = skill.hasGif, hasGif {
+            if let className = skill.className {
+                fetchGifFromS3(className: className)
+            }
+            
+        }
+        
     }
     
-    func fetchGifFromS3() {
+    func fetchGifFromS3(className: String) {
         let bucket = "3605e390-a72e-480b-8435-19d7a740a2a9"
-        let key = "skills_videos/Arabian.gif"
+        let key = "skills_videos/" + className
         
         let transferUtility = AWSS3TransferUtility.default()
         print("🤲🏾here's the bucket: \(bucket) and key \(key)")
