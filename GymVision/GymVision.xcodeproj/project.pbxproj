@@ -53,7 +53,7 @@
 		676869142BBBBA4800EA5E0A /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676869132BBBBA4800EA5E0A /* HttpClient.swift */; };
 		676869162BBBBB0A00EA5E0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676869152BBBBB0A00EA5E0A /* Constants.swift */; };
 		676869192BBBBB8E00EA5E0A /* SkillDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676869182BBBBB8E00EA5E0A /* SkillDetailViewModel.swift */; };
-		676AC2BA2BF5933F00C0A9AF /* SkillViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AC2B92BF5933F00C0A9AF /* SkillViewModelTests.swift */; };
+		676AC2BA2BF5933F00C0A9AF /* SkillDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AC2B92BF5933F00C0A9AF /* SkillDetailViewModelTests.swift */; };
 		676F445D2B7D841D0059328B /* GymVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F445C2B7D841D0059328B /* GymVisionApp.swift */; };
 		676F445F2B7D841D0059328B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F445E2B7D841D0059328B /* ContentView.swift */; };
 		676F44612B7D841F0059328B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F44602B7D841F0059328B /* Assets.xcassets */; };
@@ -151,7 +151,7 @@
 		676869132BBBBA4800EA5E0A /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		676869152BBBBB0A00EA5E0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		676869182BBBBB8E00EA5E0A /* SkillDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailViewModel.swift; sourceTree = "<group>"; };
-		676AC2B92BF5933F00C0A9AF /* SkillViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillViewModelTests.swift; sourceTree = "<group>"; };
+		676AC2B92BF5933F00C0A9AF /* SkillDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailViewModelTests.swift; sourceTree = "<group>"; };
 		676F44592B7D841D0059328B /* GymVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F445C2B7D841D0059328B /* GymVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymVisionApp.swift; sourceTree = "<group>"; };
 		676F445E2B7D841D0059328B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				676F446E2B7D841F0059328B /* GymVisionTests.swift */,
-				676AC2B92BF5933F00C0A9AF /* SkillViewModelTests.swift */,
+				676AC2B92BF5933F00C0A9AF /* SkillDetailViewModelTests.swift */,
 			);
 			path = GymVisionTests;
 			sourceTree = "<group>";
@@ -776,7 +776,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676AC2BA2BF5933F00C0A9AF /* SkillViewModelTests.swift in Sources */,
+				676AC2BA2BF5933F00C0A9AF /* SkillDetailViewModelTests.swift in Sources */,
 				676F446F2B7D841F0059328B /* GymVisionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
