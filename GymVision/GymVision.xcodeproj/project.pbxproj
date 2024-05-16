@@ -39,6 +39,7 @@
 		673FCDE32BB673ED00DC7B1C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 673FCDCF2BB673ED00DC7B1C /* Poppins-Thin.ttf */; };
 		673FCDE42BB673ED00DC7B1C /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 673FCDD02BB673ED00DC7B1C /* Poppins-ThinItalic.ttf */; };
 		674848D52B8A9AFB00D0C340 /* TopNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674848D42B8A9AFB00D0C340 /* TopNavigationBar.swift */; };
+		674D65972BF68F05005D875D /* SkillDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674D65962BF68F05005D875D /* SkillDetailViewModelTests.swift */; };
 		6756BA022B89B1A700DE1490 /* SkillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756BA012B89B1A700DE1490 /* SkillDetailView.swift */; };
 		6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6756BA062B89B29E00DE1490 /* DataModels.swift */; };
 		67661C912B83F0FB0049DBEF /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67661C902B83F0FB0049DBEF /* ActionPrediction.swift */; };
@@ -136,6 +137,7 @@
 		673FCDCF2BB673ED00DC7B1C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		673FCDD02BB673ED00DC7B1C /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		674848D42B8A9AFB00D0C340 /* TopNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationBar.swift; sourceTree = "<group>"; };
+		674D65962BF68F05005D875D /* SkillDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailViewModelTests.swift; sourceTree = "<group>"; };
 		6756BA012B89B1A700DE1490 /* SkillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDetailView.swift; sourceTree = "<group>"; };
 		6756BA062B89B29E00DE1490 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		67661C902B83F0FB0049DBEF /* ActionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				676F446E2B7D841F0059328B /* GymVisionTests.swift */,
+				674D65962BF68F05005D875D /* SkillDetailViewModelTests.swift */,
 			);
 			path = GymVisionTests;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				676F446F2B7D841F0059328B /* GymVisionTests.swift in Sources */,
+				674D65972BF68F05005D875D /* SkillDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
