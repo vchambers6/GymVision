@@ -71,6 +71,7 @@
 		677E75692BBD2CF500FE3171 /* FetchedSkillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677E75682BBD2CF500FE3171 /* FetchedSkillDetailView.swift */; };
 		6794ACD62BC31C1200E2ECD8 /* SkillTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */; };
 		679D3CBA2BBB738600793D26 /* SkillUUIDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679D3CB92BBB738600793D26 /* SkillUUIDStore.swift */; };
+		67A67CCB2C2CFBBD002C99D7 /* FederationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A67CCA2C2CFBBD002C99D7 /* FederationStore.swift */; };
 		67A978FC2B8719DE00B605AB /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */; };
 		67A978FE2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */; };
 		67A979002B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A978FF2B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift */; };
@@ -174,6 +175,7 @@
 		6794ACD52BC31C1200E2ECD8 /* SkillTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTableRowView.swift; sourceTree = "<group>"; };
 		6796C8272BE1A9FD00928180 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		679D3CB92BBB738600793D26 /* SkillUUIDStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillUUIDStore.swift; sourceTree = "<group>"; };
+		67A67CCA2C2CFBBD002C99D7 /* FederationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FederationStore.swift; sourceTree = "<group>"; };
 		67A978FB2B8719DD00B605AB /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		67A978FD2B871A0600B605AB /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
 		67A978FF2B871A2A00B605AB /* AVCaptureVideoDataOutput+PixelFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoDataOutput+PixelFormat.swift"; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				676869152BBBBB0A00EA5E0A /* Constants.swift */,
 				67C7798F2BBF02C800D8666E /* SkillCategoryStore.swift */,
 				6719FF3D2BE06C940068DD60 /* AWSS3Utils.swift */,
+				67A67CCA2C2CFBBD002C99D7 /* FederationStore.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				676F44882B7D84290059328B /* FrameView.swift in Sources */,
 				676F445F2B7D841D0059328B /* ContentView.swift in Sources */,
 				6756BA072B89B29E00DE1490 /* DataModels.swift in Sources */,
+				67A67CCB2C2CFBBD002C99D7 /* FederationStore.swift in Sources */,
 				6719FF402BE088E80068DD60 /* GifImageLoader.swift in Sources */,
 				670817F52BB6009B0066DC22 /* GifImage.swift in Sources */,
 				67661C932B83F1B80049DBEF /* SkillClassifier.mlmodel in Sources */,
